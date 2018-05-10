@@ -21,7 +21,7 @@ TAREAS PRINCIAPALES:
 		FECHA FIN:
 
 	      - Implementar el algoritmo más apropiado de acuerdo con los crite-
-	      	rios encontrados para la EDM. No es necesario implimentar los 3,
+	      	rios encontrados para la EDM. No es necesario implementar los 3,
 		tan solo los 2 más eficientes en el papel. EN LENGUAJE C.
 
 		FECHA INICIO:
@@ -38,7 +38,9 @@ TAREAS PRINCIAPALES:
 	      - Obtener gráficas del movimiento simulado para distintos forza-
 	      	mientos. Incluir una gráfica sin forzamiento para comparar.
 		Las graficas deben ser en el espacio de fases, y desplazamiento
-		en el tiempo. BONUS: Para la presentación, generar animaciones.
+		en el tiempo.
+
+		BONUS: Para la presentación, generar animaciones.
 
 		FECHA INICIO:
 		FECHA FIN:
@@ -65,7 +67,104 @@ TAREAS PRINCIAPALES:
 		FECHA FIN:
 
 	      - Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
-	      	y obtener las gráficas en el mismo.
+	      	y obtener las gráficas en el mismo. Estudiar el fenómeno de mez-
+		cla descrito en la discusión del problema.
 
 		FECHA INICIO:
-		FECHA FIN: 
+		FECHA FIN:
+
+	      - Estudiar el mínimo de "doblamiento" de periodo con detalle (ver
+	      	archivo 06-espectroOscFFT.pdf). Resolver el punto 3 y obtener
+		las gráficas correspondientes.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Resolver puntos 4 y 5. SObre este último hacer una consulta más
+	      	detallada en lo relativo al modelo de Lorentz.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Producir un archivo de texto que resuma las observaciones hechas
+	      	durante todo el proceso. Concluir especialmente sobre la rela-
+		ción entre el ruido y el caos.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+3) ANALIZAR LOS DATOS Y RESULTADOS:
+
+   SUBTAREAS: - Investigar sobre los fundamentos de la teoría del caos. En es-
+   	        pecial, qué significa caos en física y cuáles son las formas de
+		medir el caos en un sistema dinámico. Producir un archivo de
+		texto con la información encontrada, incluyendo referencias.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Realizar un nuevo muestreo a la luz de los conceptos adquiridos
+	      	si es necesario. Generar las gráficas pertinentes.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Comparar los régimenes caóticos, no caóticos e intermitentes del
+	      	sistema en términos de las variables adecuadas (según la subta-
+		rea anterior).
+
+	        FECHA INICIO:
+	      	FECHA FIN:
+
+	      - Relacionar los conceptos de caos y ruido para sistemas dinámi-
+	      	cos a partir del péndulo no lineal. Considerar explícitamente
+		por qué el análisis de Fourier fue utilizado para resolver el
+		problema.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+3) GENERAR EL ARTÍCULO FINAL:
+
+   SUBTAREAS: - Generar el archivo .tex y crear la plantilla apropiada para la
+   	      	construcción del artículo. Redactar la introducción.
+
+		FECHA INCIO:
+		FECHA FIN:
+
+	      - Construir un archivo de texto con el fundamento teórico necesa-
+	      	rio para informar al lector sobre los conceptos involucrados en
+		la solución del problema.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Consolidar las gráficas y datos pertinentes para presentar en el
+	      	artículo. Especial énfasis en el estilo de las imágenes y en la
+		precisión de los datos utilizados.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Realizar una lectura detallada de las acciones y eventualidades
+	      	presentadas a lo largo del proceso de solución del problema.
+		Repasar el arcivo de texto con las conclusiones y en análisis de
+		datos producidos en la tarea anterior. Producir un archivo de
+		texto con el análisis de datos y conclusiones definitivas.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Extraer de los archivos de texto creados la información perti-
+	      	nente y agregarla al archivo .tex. Incluir gráficas corregidas
+		y revisadas.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Realizar revisiones de estilo y presentación del artículo. Co-
+	      	rregir errores de estilo, de ortografía, o de referencias. Con-
+		solidar el artículo para entregar.
+
+		FECHA INICIO:
+		FECHA FIN:
