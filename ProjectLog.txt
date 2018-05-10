@@ -22,7 +22,7 @@ TAREAS PRINCIAPALES:
 
 	      - Implementar el algoritmo más apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implimentar los 3,
-		tan solo los más eficientes en el papel.
+		tan solo los 2 más eficientes en el papel. EN LENGUAJE C.
 
 		FECHA INICIO:
 		FECHA FIN:
@@ -42,3 +42,30 @@ TAREAS PRINCIAPALES:
 
 		FECHA INICIO:
 		FECHA FIN:
+
+	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
+	      	ción para obtener resultados más rápido
+
+		FECHA INICIO:
+		FECHA FIN:
+
+2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
+
+   SUBTAREAS: - Documentarse sobre la librería FFTW e implementar una subrutina
+   	      	que calcule la DFT de un conjunto de datos, y la potencia.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Generar las señales utilizando la rutina de solución de la EDM,
+	      	y realizar análisis de Fourier con la rutina de la subtarea an-
+		terior. Obtener gráficas de potencia en el espectro frecuencias.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
+	      	y obtener las gráficas en el mismo.
+
+		FECHA INICIO:
+		FECHA FIN: 
