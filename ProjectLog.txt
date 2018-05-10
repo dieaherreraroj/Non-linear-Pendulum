@@ -1,0 +1,44 @@
+BITÁCORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
+
+FECHA INICIO: 20 de Mayo 2018
+FECHA FIN: ------------------
+
+DESCRIPCIÓN: El presente archivo contiene el registro de todas las tareas y ac-
+	     ciones llevadas a cabo para resolver el problema descrito en el
+	     archivo Readme.txt. Estos se llevan por fecha. También se encuentra
+	     un listado de tareas a realizar, y su respectiva fecha de inicio y
+	     fecha de finalización.
+
+TAREAS PRINCIAPALES:
+
+1) RESOLVER LA ECUACIÓN DE MOVIMIENTO DEL PÉNDULO NO LINEAL FORZADO:
+
+   SUBTAREAS: - Documentarse sobre al menos tres métodos de solución de ecua-
+   	        siones diferenciales en mecánica. Bibliografía sugerida: Libros
+		de métodos numéricos en Drive personal de Diego Herrera.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Implementar el algoritmo más apropiado de acuerdo con los crite-
+	      	rios encontrados para la EDM. No es necesario implimentar los 3,
+		tan solo los más eficientes en el papel.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Resolver la EDM, utilizando los dos algortimos y comparar según
+	      	criterios de: efectividad, eficiencia. Si es necesario, realizar
+		un análisis de error comparando, por ejemplo, con el límite de
+		linealidad del péndulo. Escoger un método y justificar
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Obtener gráficas del movimiento simulado para distintos forza-
+	      	mientos. Incluir una gráfica sin forzamiento para comparar.
+		Las graficas deben ser en el espacio de fases, y desplazamiento
+		en el tiempo. BONUS: Para la presentación, generar animaciones.
+
+		FECHA INICIO:
+		FECHA FIN:
