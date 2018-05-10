@@ -168,3 +168,24 @@ TAREAS PRINCIAPALES:
 
 		FECHA INICIO:
 		FECHA FIN:
+
+4) PREPARAR PRESENTACIÓN AL GRUPO:
+
+   SUBTAREAS: - Con base en los archivos de texto, crear diapositivas con los
+   	        contenidos más importantes del proyecto:
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Introducir las gráficas utilizadas en el artículo. Si fue posi-
+	      	ble, agregar la animación.
+
+		FECHA INICIO:
+		FECHA FIN:
+
+	      - Realizar una reunión de grupo para repartir contenidos en la ex-
+	      	posición. Realizar una evaluación crítica de la forma como cada
+		uno de los integrantes expone.
+
+		FECHA INICIO:
+		FECHA FIN:
