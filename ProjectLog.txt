@@ -1,6 +1,6 @@
 BITÁCORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
 
-FECHA INICIO: 20 de Mayo 2018
+FECHA INICIO: 20 de Mayo 2018.
 FECHA FIN: ------------------
 
 DESCRIPCIÓN: El presente archivo contiene el registro de todas las tareas y ac-
@@ -13,21 +13,21 @@ TAREAS PRINCIAPALES:
 
 1) RESOLVER LA ECUACIÓN DE MOVIMIENTO DEL PÉNDULO NO LINEAL FORZADO:
 
-   SUBTAREAS: - Documentarse sobre al menos tres métodos de solución de ecua-
+   SUBTAREAS: 1 Documentarse sobre al menos tres métodos de solución de ecua-
    	        siones diferenciales en mecánica. Bibliografía sugerida: Libros
 		de métodos numéricos en Drive personal de Diego Herrera.
 
-		FECHA INICIO:
+		FECHA INICIO: 20 de Mayo 2018.
 		FECHA FIN:
 
-	      - Implementar el algoritmo más apropiado de acuerdo con los crite-
+	      2 Implementar el algoritmo más apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implementar los 3,
 		tan solo los 2 más eficientes en el papel. EN LENGUAJE C.
 
-		FECHA INICIO:
+		FECHA INICIO: 20 de Mayo 2018.
 		FECHA FIN:
 
-	      - Resolver la EDM, utilizando los dos algortimos y comparar según
+	      3 Resolver la EDM, utilizando los dos algortimos y comparar según
 	      	criterios de: efectividad, eficiencia. Si es necesario, realizar
 		un análisis de error comparando, por ejemplo, con el límite de
 		linealidad del péndulo. Escoger un método y justificar
@@ -35,7 +35,7 @@ TAREAS PRINCIAPALES:
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Obtener gráficas del movimiento simulado para distintos forza-
+	      4 Obtener gráficas del movimiento simulado para distintos forza-
 	      	mientos. Incluir una gráfica sin forzamiento para comparar.
 		Las graficas deben ser en el espacio de fases, y desplazamiento
 		en el tiempo.
@@ -53,40 +53,40 @@ TAREAS PRINCIAPALES:
 
 2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
 
-   SUBTAREAS: - Documentarse sobre la librería FFTW e implementar una subrutina
+   SUBTAREAS: 1 Documentarse sobre la librería FFTW e implementar una subrutina
    	      	que calcule la DFT de un conjunto de datos, y la potencia.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Generar las señales utilizando la rutina de solución de la EDM,
+	      2 Generar las señales utilizando la rutina de solución de la EDM,
 	      	y realizar análisis de Fourier con la rutina de la subtarea an-
 		terior. Obtener gráficas de potencia en el espectro frecuencias.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
+	      3 Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
 	      	y obtener las gráficas en el mismo. Estudiar el fenómeno de mez-
 		cla descrito en la discusión del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Estudiar el mínimo de "doblamiento" de periodo con detalle (ver
+	      4 Estudiar el mínimo de "doblamiento" de periodo con detalle (ver
 	      	archivo 06-espectroOscFFT.pdf). Resolver el punto 3 y obtener
 		las gráficas correspondientes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Resolver puntos 4 y 5. SObre este último hacer una consulta más
+	      5 Resolver puntos 4 y 5. SObre este último hacer una consulta más
 	      	detallada en lo relativo al modelo de Lorentz.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Producir un archivo de texto que resuma las observaciones hechas
+	      6 Producir un archivo de texto que resuma las observaciones hechas
 	      	durante todo el proceso. Concluir especialmente sobre la rela-
 		ción entre el ruido y el caos.
 
@@ -95,7 +95,7 @@ TAREAS PRINCIAPALES:
 
 3) ANALIZAR LOS DATOS Y RESULTADOS:
 
-   SUBTAREAS: - Investigar sobre los fundamentos de la teoría del caos. En es-
+   SUBTAREAS: 1 Investigar sobre los fundamentos de la teoría del caos. En es-
    	        pecial, qué significa caos en física y cuáles son las formas de
 		medir el caos en un sistema dinámico. Producir un archivo de
 		texto con la información encontrada, incluyendo referencias.
@@ -103,20 +103,20 @@ TAREAS PRINCIAPALES:
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Realizar un nuevo muestreo a la luz de los conceptos adquiridos
+	      2 Realizar un nuevo muestreo a la luz de los conceptos adquiridos
 	      	si es necesario. Generar las gráficas pertinentes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Comparar los régimenes caóticos, no caóticos e intermitentes del
+	      3 Comparar los régimenes caóticos, no caóticos e intermitentes del
 	      	sistema en términos de las variables adecuadas (según la subta-
 		rea anterior).
 
 	        FECHA INICIO:
 	      	FECHA FIN:
 
-	      - Relacionar los conceptos de caos y ruido para sistemas dinámi-
+	      4 Relacionar los conceptos de caos y ruido para sistemas dinámi-
 	      	cos a partir del péndulo no lineal. Considerar explícitamente
 		por qué el análisis de Fourier fue utilizado para resolver el
 		problema.
@@ -126,27 +126,27 @@ TAREAS PRINCIAPALES:
 
 3) GENERAR EL ARTÍCULO FINAL:
 
-   SUBTAREAS: - Generar el archivo .tex y crear la plantilla apropiada para la
+   SUBTAREAS: 1 Generar el archivo .tex y crear la plantilla apropiada para la
    	      	construcción del artículo. Redactar la introducción.
 
 		FECHA INCIO:
 		FECHA FIN:
 
-	      - Construir un archivo de texto con el fundamento teórico necesa-
+	      2 Construir un archivo de texto con el fundamento teórico necesa-
 	      	rio para informar al lector sobre los conceptos involucrados en
 		la solución del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Consolidar las gráficas y datos pertinentes para presentar en el
+	      3 Consolidar las gráficas y datos pertinentes para presentar en el
 	      	artículo. Especial énfasis en el estilo de las imágenes y en la
 		precisión de los datos utilizados.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Realizar una lectura detallada de las acciones y eventualidades
+	      4 Realizar una lectura detallada de las acciones y eventualidades
 	      	presentadas a lo largo del proceso de solución del problema.
 		Repasar el arcivo de texto con las conclusiones y en análisis de
 		datos producidos en la tarea anterior. Producir un archivo de
@@ -155,14 +155,14 @@ TAREAS PRINCIAPALES:
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Extraer de los archivos de texto creados la información perti-
+	      5 Extraer de los archivos de texto creados la información perti-
 	      	nente y agregarla al archivo .tex. Incluir gráficas corregidas
 		y revisadas.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Realizar revisiones de estilo y presentación del artículo. Co-
+	      6 Realizar revisiones de estilo y presentación del artículo. Co-
 	      	rregir errores de estilo, de ortografía, o de referencias. Con-
 		solidar el artículo para entregar.
 
@@ -171,21 +171,78 @@ TAREAS PRINCIAPALES:
 
 4) PREPARAR PRESENTACIÓN AL GRUPO:
 
-   SUBTAREAS: - Con base en los archivos de texto, crear diapositivas con los
+   SUBTAREAS: 1 Con base en los archivos de texto, crear diapositivas con los
    	        contenidos más importantes del proyecto:
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Introducir las gráficas utilizadas en el artículo. Si fue posi-
+	      2 Introducir las gráficas utilizadas en el artículo. Si fue posi-
 	      	ble, agregar la animación.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      - Realizar una reunión de grupo para repartir contenidos en la ex-
+	      3 Realizar una reunión de grupo para repartir contenidos en la ex-
 	      	posición. Realizar una evaluación crítica de la forma como cada
 		uno de los integrantes expone.
 
 		FECHA INICIO:
 		FECHA FIN:
+
+ENTRADAS BITÁCORA PROYECTO:
+
+FECHA ENTRADA: 20 de Mayo 2018.
+
+El día de hoy se realizó el cronograma de actividades para el desarrollo del
+proyecto. Se creó un repositorio en GitHub para consolidar todos los archivos,
+gráficas y datos necesarios para reconstruir el proceso de solución del proble-
+ma. Además, se dió inicio a la subtarea 1.1.
+
+Es claro que el problema de la tarea 1 es resolver una EDO con condiciones ini-
+ciales. Por lo tanto, nos interesan rutinas encaminadas a encontrar la solución
+de un problema de valor inicial de la forma:
+
+      	       	  		y'(t) = f(t,y)
+
+NOTA: En general, esta ecuación puede representar un sistema de ecuaciones dife-
+      renciales no lineal.
+
+Como la ecuación de interés no es de primer orden, sino de segundo orden, es ne-
+cesario reescribir el sistema como:
+
+				 y'(t) = v(t)
+		    v'(t) = -w*sin(y) - q*v + Fd*sin(u*t)
+
+El cual no solo es un sistema de ecuaciones no lineal, sino que además no es au-
+tónomo. Dentro del póquer de algoritmos de los que se puede hacer uso para solu-
+cionar este sistema se encuentran:
+
+			    - Stormer Verlet.
+			    - Leapfrog.
+			    - Runge-Kutta 4.
+
+MÉTODO RK4:
+
+El algoritmo básico consiste en la creación de un vector que contenga las varia-
+bles dependientes del sistema (y(t),v(t)) y otro con sus derivadas (y'(t),v'(t))
+y a partir de estos, realizar los siguientes pasos de integración:
+
+    	      	     	      k1 = f(tn,yn)
+		     k2 = f(tn + 0.5*h,yn + 0.5*h*k1)
+		     k3 = f(tn + 0.5*h,yn + 0.5*h*k2)
+		        k4 = f(tn + h,yn + h*k3)
+
+	      y_(n+1) = yn + (1/6)*h*(k1 + 2*k2 + 2*k3 + k4)
+
+Los primeros pasos son intermedios para aproximar mejor el valor de y(tn), y
+solo el último paso representa el avance en el tiempo del sistema. h es el paso
+de integración de modo que tn = t_(n-1) + h. Se ha implementado este algoritmo
+en lenguaje C, y se han obtenido resultados satisfactorios para un oscilador
+armónico con parámetros:
+
+			Frecuencia: 4.56
+			Paso de tiempo: 0.008
+			# Pasos: 1000
+			Vel. Inicial: 2.0
+			Pos. Inicial: 0.0
