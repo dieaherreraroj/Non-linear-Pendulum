@@ -250,7 +250,7 @@ armónico con parámetros:
 FEHCA ENTRADA: 13 de Mayo 2018.
 
 El dia de hoy se modularizo completamente la rutina que implementa rk4 en len-
-guaje C. Se obtuvieron graficas que lamentablemente no pudieron se rexportadas 
+guaje C. Se obtuvieron graficas que lamentablemente no pudieron se exportadas 
 a pdf. Sin embargo se realizo una observacion interesante:
 
        El sistema tiene un comportamiento caotico en sus etapas ini-
@@ -309,3 +309,19 @@ IMPORTANTE: Investigar con detenimiento el calculo de la distribucion de poten-
 	    cias utilizando la DFT. La DFT calculada con la fftw no esta norma-
 	    lizada. Discutir la normalizacion pertinente.
 
+Se realizo un muestreo con los siguientes parametros:
+
+   	      	              NSTEPS = 100000
+			      dt = 0.0008
+			      y0 = 0.75*pi
+			      v0 = 0.0
+			      f_samp = 1/dt
+			      w = 4.56
+			      q = 0.98
+			      u = 4.87
+			      Fd = 2.95
+
+A partir del programa, se genero la grafica powdist_Fd_2.95.pdf. En esta, se ob-
+serva el fenomeno advertido el dia 13 de Mayo. Sin embargo, se guarda reserva
+sobre las conclusiones puesto que los resultados no concuerdan con lo observado
+en el archivo mencionado arriba.
