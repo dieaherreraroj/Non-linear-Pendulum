@@ -25,37 +25,6 @@ int main(int argc, char **argv){
   double v0 = 2.0;
 
   rk4_integ(n,NSTEP,dt,t0,x0,v0);
-
-  /*
-  double *y = (double*) calloc(n,sizeof(double));
-  double *k1 = (double*) calloc(n,sizeof(double));
-  double *k2 = (double*) calloc(n,sizeof(double));
-  double *k3 = (double*) calloc(n,sizeof(double));
-  double *k4 = (double*) calloc(n,sizeof(double));
-
-  y[0] = y0; y[1] = v0;
-
-  double t = t0;
-
-  for(int ii = 1; ii<NSTEP; ii++){
-    t = t0 + ii*dt;
-    // Preliminary steps: compute ki vectors.
-    update_kvect(n,1,dt,t,y,y,k1);
-    update_kvect(n,2,dt,t,y,k1,k2);
-    update_kvect(n,3,dt,t,y,k2,k3);
-    update_kvect(n,4,dt,t,y,k3,k4);
-    // Update solution.
-    for(int jj = 0; jj<n; jj++)
-      y[jj] += (1.0/6.0)*dt*(k1[jj]+2.0*(k2[jj]+k3[jj])+k4[jj]);
-    printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,y[0],y[1]);
-  }
-
-  free(y);
-  free(k1);
-  free(k2);
-  free(k3);
-  free(k4);
-  */
   
   return 0;
   
