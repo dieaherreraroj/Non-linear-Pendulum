@@ -42,7 +42,7 @@ TAREAS PRINCIAPALES:
 
 		BONUS: Para la presentación, generar animaciones.
 
-		FECHA INICIO:
+		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
@@ -56,14 +56,14 @@ TAREAS PRINCIAPALES:
    SUBTAREAS: 1 Documentarse sobre la librería FFTW e implementar una subrutina
    	      	que calcule la DFT de un conjunto de datos, y la potencia.
 
-		FECHA INICIO:
-		FECHA FIN:
+		FECHA INICIO: 14 de Mayo 2018.
+		FECHA FIN: 14 de Mayo 2018.
 
 	      2 Generar las señales utilizando la rutina de solución de la EDM,
 	      	y realizar análisis de Fourier con la rutina de la subtarea an-
 		terior. Obtener gráficas de potencia en el espectro frecuencias.
 
-		FECHA INICIO:
+		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      3 Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
@@ -295,3 +295,17 @@ NOTA: Analizar el comportamiento sin friccion y sin forzamiento, y comparar.
       cuencias en cada caso? ¿Influye la intensiadad del forzamiento en la dis-
       tribucion de frecuencias? ¿Como afecta la intensidad de la friccion vis-
       cosa el decaimiento en espiral?
+
+FECHA: 14 de Mayo 2018.
+
+El dia de hoy se implemento la primera runtina completa que calcula la DFT de la
+señal generada utilizando rk4. Los resultados muestran que con las condiciones
+iniciales planteadas, y el forzamiento, la potencia se concentra en un pico
+ubicado a muy baja frecuencia. Aunque esto pareciera ser consistenete con el re-
+gimen no caotico descrito en el archivo 06-espectroOscFFT.pdf los datos no son
+completamente satisfactorios.
+
+IMPORTANTE: Investigar con detenimiento el calculo de la distribucion de poten-
+	    cias utilizando la DFT. La DFT calculada con la fftw no esta norma-
+	    lizada. Discutir la normalizacion pertinente.
+
