@@ -1,6 +1,6 @@
 BITÁCORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
 
-FECHA INICIO: 20 de Mayo 2018.
+FECHA INICIO: 2 de Mayo 2018.
 FECHA FIN: ------------------
 
 DESCRIPCIÓN: El presente archivo contiene el registro de todas las tareas y ac-
@@ -17,14 +17,14 @@ TAREAS PRINCIAPALES:
    	        siones diferenciales en mecánica. Bibliografía sugerida: Libros
 		de métodos numéricos en Drive personal de Diego Herrera.
 
-		FECHA INICIO: 20 de Mayo 2018.
+		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
 	      2 Implementar el algoritmo más apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implementar los 3,
 		tan solo los 2 más eficientes en el papel. EN LENGUAJE C.
 
-		FECHA INICIO: 20 de Mayo 2018.
+		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
 	      3 Resolver la EDM, utilizando los dos algortimos y comparar según
@@ -192,7 +192,7 @@ TAREAS PRINCIAPALES:
 
 ENTRADAS BITÁCORA PROYECTO:
 
-FECHA ENTRADA: 20 de Mayo 2018.
+FECHA ENTRADA: 2 de Mayo 2018.
 
 El día de hoy se realizó el cronograma de actividades para el desarrollo del
 proyecto. Se creó un repositorio en GitHub para consolidar todos los archivos,
@@ -246,3 +246,52 @@ armónico con parámetros:
 			# Pasos: 1000
 			Vel. Inicial: 2.0
 			Pos. Inicial: 0.0
+
+FEHCA ENTRADA: 13 de Mayo 2018.
+
+El dia de hoy se modularizo completamente la rutina que implementa rk4 en len-
+guaje C. Se obtuvieron graficas que lamentablemente no pudieron se rexportadas 
+a pdf. Sin embargo se realizo una observacion interesante:
+
+       El sistema tiene un comportamiento caotico en sus etapas ini-
+       ciales de moviemiento. Posteriormente, el movimeinto es casi
+       armonico simple. En el espacio de fases, las trayectorias son
+       espirales que tienden a cerrarse en lo que parese una trayec-
+       toria tìpica de un oscilador armonico.
+
+Se realizaron simulaciones que consideraban pequeñas desviaciones de la posici-
+cion de equilibrio y0 = 0. No se observaron diferencias dramaticas en las tra-
+yectorias en el espacio de fases. Sin embargo, el movimiento es bastante impre-
+decible y muy "desordenado" cuando el sistema se encuentra en la fase transien-
+te. Se manejaron condiciones iniciales yi != 0.0 y vi = 0.0. Esto corresponde a
+un desplazamiento de la posicion de equilibrio 
+
+IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
+	    cias de las condiciones iniciales. Debido a la presencia de fric-
+	    cion viscosa, se espera que el comportamiento transiente se "apague"
+	    eventualmente. Esto corresponde al decaimiento en espiral hacia la
+	    trayectoria pseudo-armonica observada. Esta ultima, correpondiente
+	    a la elipse apreciada cuando ha transcurrido mucho tiempo.
+
+	    Un analisis rapido muestra que, para un movimiento armonico, las 
+	    trayectorias (en el espacio de fases) correspondientes son elipses
+	    cuya razon entre semiejes es proporcional a la frecuencia. Si v se
+	    toma en el eje vertica, e y en la horizontal, la razon entre los
+	    semiejes v e y es precisamente la frecuencia del oscilador.
+
+	    Cuando se considera el movimiento caotico, este parace corresponder
+	    (aproximadamente) a elipses "decayentes". Es decir, como si el osci-
+	    lador, al caer en la espiral de las trayectorias del espacio de fa-
+	    ses, pasara por elipses cuyos semiejes son cada vez mas pequeños.Por
+	    tanto, el espectro de frecuencias esperado, pareciera ser una dis-
+	    tribucion con un pico en la frecuencia correspondiente al estado es-
+	    tacionario inducido por el forzamiento, y unos picos menores distri-
+	    buidos principalmente hacia las frecuencias inferiores. Esto se de-
+	    duce al observar que en el decaimiento een espiral, las "elipses 
+	    decayentes" son mas alargadas hacia el eje y.
+
+NOTA: Analizar el comportamiento sin friccion y sin forzamiento, y comparar.
+      ¿Siguen siendo espirales las trayectorias? ¿Como seria el espectro de fre-
+      cuencias en cada caso? ¿Influye la intensiadad del forzamiento en la dis-
+      tribucion de frecuencias? ¿Como afecta la intensidad de la friccion vis-
+      cosa el decaimiento en espiral?
