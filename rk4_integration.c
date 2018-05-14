@@ -8,7 +8,7 @@ int main(int argc, char **argv){
   double dt = 0.0008;
   double t0 = 0.0;
   double x0 = 3.1416*0.75;
-  double v0 = w*x0;
+  double v0 = 0.0;
   double f_samp = 1.0/dt;
 
   double *x = (double*) calloc(NSTEP,sizeof(double));
@@ -18,7 +18,7 @@ int main(int argc, char **argv){
   FFTW_Analize(NSTEP,x,p);
 
   double f  = 0;
-  for(int ii = 0; f<100; ii++){
+  for(int ii = 0; f<5.0; ii++){
     f = f_samp*((1.0*ii)/NSTEP);
     printf("%4.7f\t%4.7f\n",f,p[ii]);
   }
