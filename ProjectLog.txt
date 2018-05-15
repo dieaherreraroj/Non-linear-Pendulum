@@ -1,86 +1,86 @@
-BIT�CORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
+BITACORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
 
 FECHA INICIO: 2 de Mayo 2018.
 FECHA FIN: ------------------
 
-DESCRIPCI�N: El presente archivo contiene el registro de todas las tareas y ac-
+DESCRIPCION: El presente archivo contiene el registro de todas las tareas y ac-
 	     ciones llevadas a cabo para resolver el problema descrito en el
-	     archivo Readme.txt. Estos se llevan por fecha. Tambi�n se encuentra
+	     archivo Readme.txt. Estos se llevan por fecha. Tambien se encuentra
 	     un listado de tareas a realizar, y su respectiva fecha de inicio y
-	     fecha de finalizaci�n.
+	     fecha de finalizacion.
 
 TAREAS PRINCIAPALES:
 
-1) RESOLVER LA ECUACI�N DE MOVIMIENTO DEL P�NDULO NO LINEAL FORZADO:
+1) RESOLVER LA ECUACION DE MOVIMIENTO DEL PENDULO NO LINEAL FORZADO:
 
-   SUBTAREAS: 1 Documentarse sobre al menos tres m�todos de soluci�n de ecua-
-   	        siones diferenciales en mec�nica. Bibliograf�a sugerida: Libros
-		de m�todos num�ricos en Drive personal de Diego Herrera.
+   SUBTAREAS: 1 Documentarse sobre al menos tres metodos de solucion de ecua-
+   	        siones diferenciales en mecanica. Bibliografia sugerida: Libros
+		de metodos numericos en Drive personal de Diego Herrera.
 
 		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
-	      2 Implementar el algoritmo m�s apropiado de acuerdo con los crite-
+	      2 Implementar el algoritmo mas apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implementar los 3,
-		tan solo los 2 m�s eficientes en el papel. EN LENGUAJE C.
+		tan solo los 2 mas eficientes en el papel. EN LENGUAJE C.
 
 		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
-	      3 Resolver la EDM, utilizando los dos algortimos y comparar seg�n
+	      3 Resolver la EDM, utilizando los dos algortimos y comparar segun
 	      	criterios de: efectividad, eficiencia. Si es necesario, realizar
-		un an�lisis de error comparando, por ejemplo, con el l�mite de
-		linealidad del p�ndulo. Escoger un m�todo y justificar
+		un analisis de error comparando, por ejemplo, con el limite de
+		linealidad del pendulo. Escoger un metodo y justificar
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      4 Obtener gr�ficas del movimiento simulado para distintos forza-
-	      	mientos. Incluir una gr�fica sin forzamiento para comparar.
+	      4 Obtener graficas del movimiento simulado para distintos forza-
+	      	mientos. Incluir una grafica sin forzamiento para comparar.
 		Las graficas deben ser en el espacio de fases, y desplazamiento
 		en el tiempo.
 
-		BONUS: Para la presentaci�n, generar animaciones.
+		BONUS: Para la presentacion, generar animaciones.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
-	      	ci�n para obtener resultados m�s r�pido
+	      	cion para obtener resultados mas rapido
 
 		FECHA INICIO:
 		FECHA FIN:
 
-2) REALIZAR EL MUESTRO DE LAS SE�ALES PARA ANALISIS DEL RUIDO:
+2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
 
-   SUBTAREAS: 1 Documentarse sobre la librer�a FFTW e implementar una subrutina
+   SUBTAREAS: 1 Documentarse sobre la libreria FFTW e implementar una subrutina
    	      	que calcule la DFT de un conjunto de datos, y la potencia.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN: 14 de Mayo 2018.
 
-	      2 Generar las se�ales utilizando la rutina de soluci�n de la EDM,
-	      	y realizar an�lisis de Fourier con la rutina de la subtarea an-
-		terior. Obtener gr�ficas de potencia en el espectro frecuencias.
+	      2 Generar las señales utilizando la rutina de solucion de la EDM,
+	      	y realizar analisis de Fourier con la rutina de la subtarea an-
+		terior. Obtener graficas de potencia en el espectro frecuencias.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      3 Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
-	      	y obtener las gr�ficas en el mismo. Estudiar el fen�meno de mez-
-		cla descrito en la discusi�n del problema.
+	      	y obtener las graficas en el mismo. Estudiar el fenomeno de mez-
+		cla descrito en la discusion del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      4 Estudiar el m�nimo de "doblamiento" de periodo con detalle (ver
+	      4 Estudiar el minimo de "doblamiento" de periodo con detalle (ver
 	      	archivo 06-espectroOscFFT.pdf). Resolver el punto 3 y obtener
-		las gr�ficas correspondientes.
+		las graficas correspondientes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      5 Resolver puntos 4 y 5. SObre este �ltimo hacer una consulta m�s
+	      5 Resolver puntos 4 y 5. Sobre este ultimo hacer una consulta mas
 	      	detallada en lo relativo al modelo de Lorentz.
 
 		FECHA INICIO:
@@ -88,145 +88,145 @@ TAREAS PRINCIAPALES:
 
 	      6 Producir un archivo de texto que resuma las observaciones hechas
 	      	durante todo el proceso. Concluir especialmente sobre la rela-
-		ci�n entre el ruido y el caos.
+		cion entre el ruido y el caos.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 3) ANALIZAR LOS DATOS Y RESULTADOS:
 
-   SUBTAREAS: 1 Investigar sobre los fundamentos de la teor�a del caos. En es-
-   	        pecial, qu� significa caos en f�sica y cu�les son las formas de
-		medir el caos en un sistema din�mico. Producir un archivo de
-		texto con la informaci�n encontrada, incluyendo referencias.
+   SUBTAREAS: 1 Investigar sobre los fundamentos de la teoria del caos. En es-
+   	        pecial, que significa caos en fisica y cuales son las formas de
+		medir el caos en un sistema dinamico. Producir un archivo de
+		texto con la informacion encontrada, incluyendo referencias.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 	      2 Realizar un nuevo muestreo a la luz de los conceptos adquiridos
-	      	si es necesario. Generar las gr�ficas pertinentes.
+	      	si es necesario. Generar las graficas pertinentes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Comparar los r�gimenes ca�ticos, no ca�ticos e intermitentes del
-	      	sistema en t�rminos de las variables adecuadas (seg�n la subta-
+	      3 Comparar los regimenes caoticos, no caoticos e intermitentes del
+	      	sistema en terminos de las variables adecuadas (segun la subta-
 		rea anterior).
 
 	        FECHA INICIO:
 	      	FECHA FIN:
 
-	      4 Relacionar los conceptos de caos y ruido para sistemas din�mi-
-	      	cos a partir del p�ndulo no lineal. Considerar expl�citamente
-		por qu� el an�lisis de Fourier fue utilizado para resolver el
+	      4 Relacionar los conceptos de caos y ruido para sistemas dinami-
+	      	cos a partir del pendulo no lineal. Considerar explicitamente
+		por que el analisis de Fourier fue utilizado para resolver el
 		problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-3) GENERAR EL ART�CULO FINAL:
+3) GENERAR EL ARTICULO FINAL:
 
    SUBTAREAS: 1 Generar el archivo .tex y crear la plantilla apropiada para la
-   	      	construcci�n del art�culo. Redactar la introducci�n.
+   	      	construccion del articulo. Redactar la introduccion.
 
 		FECHA INCIO:
 		FECHA FIN:
 
-	      2 Construir un archivo de texto con el fundamento te�rico necesa-
+	      2 Construir un archivo de texto con el fundamento teorico necesa-
 	      	rio para informar al lector sobre los conceptos involucrados en
-		la soluci�n del problema.
+		la solucion del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Consolidar las gr�ficas y datos pertinentes para presentar en el
-	      	art�culo. Especial �nfasis en el estilo de las im�genes y en la
-		precisi�n de los datos utilizados.
+	      3 Consolidar las graficas y datos pertinentes para presentar en el
+	      	articulo. Especial enfasis en el estilo de las imagenes y en la
+		precision de los datos utilizados.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 	      4 Realizar una lectura detallada de las acciones y eventualidades
-	      	presentadas a lo largo del proceso de soluci�n del problema.
-		Repasar el arcivo de texto con las conclusiones y en an�lisis de
+	      	presentadas a lo largo del proceso de solucion del problema.
+		Repasar el arcivo de texto con las conclusiones y en analisis de
 		datos producidos en la tarea anterior. Producir un archivo de
-		texto con el an�lisis de datos y conclusiones definitivas.
+		texto con el analisis de datos y conclusiones definitivas.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      5 Extraer de los archivos de texto creados la informaci�n perti-
-	      	nente y agregarla al archivo .tex. Incluir gr�ficas corregidas
+	      5 Extraer de los archivos de texto creados la informacion perti-
+	      	nente y agregarla al archivo .tex. Incluir graficas corregidas
 		y revisadas.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      6 Realizar revisiones de estilo y presentaci�n del art�culo. Co-
-	      	rregir errores de estilo, de ortograf�a, o de referencias. Con-
-		solidar el art�culo para entregar.
+	      6 Realizar revisiones de estilo y presentacion del articulo. Co-
+	      	rregir errores de estilo, de ortografia, o de referencias. Con-
+		solidar el articulo para entregar.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-4) PREPARAR PRESENTACI�N AL GRUPO:
+4) PREPARAR PRESENTACION AL GRUPO:
 
    SUBTAREAS: 1 Con base en los archivos de texto, crear diapositivas con los
-   	        contenidos m�s importantes del proyecto:
+   	        contenidos mas importantes del proyecto:
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      2 Introducir las gr�ficas utilizadas en el art�culo. Si fue posi-
-	      	ble, agregar la animaci�n.
+	      2 Introducir las graficas utilizadas en el articulo. Si fue posi-
+	      	ble, agregar la animacion.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Realizar una reuni�n de grupo para repartir contenidos en la ex-
-	      	posici�n. Realizar una evaluaci�n cr�tica de la forma como cada
+	      3 Realizar una reunion de grupo para repartir contenidos en la ex-
+	      	posicion. Realizar una evaluacion critica de la forma como cada
 		uno de los integrantes expone.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-ENTRADAS BIT�CORA PROYECTO:
+ENTRADAS BITACORA PROYECTO:
 
 FECHA ENTRADA: 2 de Mayo 2018.
 
-El d�a de hoy se realiz� el cronograma de actividades para el desarrollo del
-proyecto. Se cre� un repositorio en GitHub para consolidar todos los archivos,
-gr�ficas y datos necesarios para reconstruir el proceso de soluci�n del proble-
-ma. Adem�s, se di� inicio a la subtarea 1.1.
+El dia de hoy se realizo el cronograma de actividades para el desarrollo del
+proyecto. Se creo un repositorio en GitHub para consolidar todos los archivos,
+graficas y datos necesarios para reconstruir el proceso de solucion del proble-
+ma. Ademas, se dio inicio a la subtarea 1.1.
 
 Es claro que el problema de la tarea 1 es resolver una EDO con condiciones ini-
-ciales. Por lo tanto, nos interesan rutinas encaminadas a encontrar la soluci�n
+ciales. Por lo tanto, nos interesan rutinas encaminadas a encontrar la solucion
 de un problema de valor inicial de la forma:
 
       	       	  		y'(t) = f(t,y)
 
-NOTA: En general, esta ecuaci�n puede representar un sistema de ecuaciones dife-
+NOTA: En general, esta ecuacion puede representar un sistema de ecuaciones dife-
       renciales no lineal.
 
-Como la ecuaci�n de inter�s no es de primer orden, sino de segundo orden, es ne-
+Como la ecuacion de interes no es de primer orden, sino de segundo orden, es ne-
 cesario reescribir el sistema como:
 
 				 y'(t) = v(t)
 		    v'(t) = -w*sin(y) - q*v + Fd*sin(u*t)
 
-El cual no solo es un sistema de ecuaciones no lineal, sino que adem�s no es au-
-t�nomo. Dentro del p�quer de algoritmos de los que se puede hacer uso para solu-
+El cual no solo es un sistema de ecuaciones no lineal, sino que ademas no es au-
+tonomo. Dentro del poquer de algoritmos de los que se puede hacer uso para solu-
 cionar este sistema se encuentran:
 
 			    - Stormer Verlet.
 			    - Leapfrog.
 			    - Runge-Kutta 4.
 
-M�TODO RK4:
+METODO RK4:
 
-El algoritmo b�sico consiste en la creaci�n de un vector que contenga las varia-
+El algoritmo basico consiste en la creacion de un vector que contenga las varia-
 bles dependientes del sistema (y(t),v(t)) y otro con sus derivadas (y'(t),v'(t))
-y a partir de estos, realizar los siguientes pasos de integraci�n:
+y a partir de estos, realizar los siguientes pasos de integracion:
 
     	      	     	      k1 = f(tn,yn)
 		     k2 = f(tn + 0.5*h,yn + 0.5*h*k1)
@@ -236,10 +236,10 @@ y a partir de estos, realizar los siguientes pasos de integraci�n:
 	      y_(n+1) = yn + (1/6)*h*(k1 + 2*k2 + 2*k3 + k4)
 
 Los primeros pasos son intermedios para aproximar mejor el valor de y(tn), y
-solo el �ltimo paso representa el avance en el tiempo del sistema. h es el paso
-de integraci�n de modo que tn = t_(n-1) + h. Se ha implementado este algoritmo
+solo el ultimo paso representa el avance en el tiempo del sistema. h es el paso
+de integracion de modo que tn = t_(n-1) + h. Se ha implementado este algoritmo
 en lenguaje C, y se han obtenido resultados satisfactorios para un oscilador
-arm�nico con par�metros:
+armonico con parametros:
 
 			Frecuencia: 4.56
 			Paso de tiempo: 0.008
@@ -257,9 +257,9 @@ a pdf. Sin embargo se realizo una observacion interesante:
        ciales de moviemiento. Posteriormente, el movimeinto es casi
        armonico simple. En el espacio de fases, las trayectorias son
        espirales que tienden a cerrarse en lo que parese una trayec-
-       toria t�pica de un oscilador armonico.
+       toria topica de un oscilador armonico.
 
-Se realizaron simulaciones que consideraban peque�as desviaciones de la posici-
+Se realizaron simulaciones que consideraban pequeñas desviaciones de la posici-
 cion de equilibrio y0 = 0. No se observaron diferencias dramaticas en las tra-
 yectorias en el espacio de fases. Sin embargo, el movimiento es bastante impre-
 decible y muy "desordenado" cuando el sistema se encuentra en la fase transien-
@@ -282,7 +282,7 @@ IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
 	    Cuando se considera el movimiento caotico, este parace corresponder
 	    (aproximadamente) a elipses "decayentes". Es decir, como si el osci-
 	    lador, al caer en la espiral de las trayectorias del espacio de fa-
-	    ses, pasara por elipses cuyos semiejes son cada vez mas peque�os.Por
+	    ses, pasara por elipses cuyos semiejes son cada vez mas pequeños.Por
 	    tanto, el espectro de frecuencias esperado, pareciera ser una dis-
 	    tribucion con un pico en la frecuencia correspondiente al estado es-
 	    tacionario inducido por el forzamiento, y unos picos menores distri-
@@ -291,15 +291,15 @@ IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
 	    decayentes" son mas alargadas hacia el eje y.
 
 NOTA: Analizar el comportamiento sin friccion y sin forzamiento, y comparar.
-      �Siguen siendo espirales las trayectorias? �Como seria el espectro de fre-
-      cuencias en cada caso? �Influye la intensiadad del forzamiento en la dis-
-      tribucion de frecuencias? �Como afecta la intensidad de la friccion vis-
+      ¿Siguen siendo espirales las trayectorias? ¿Como seria el espectro de fre-
+      cuencias en cada caso? ¿Influye la intensiadad del forzamiento en la dis-
+      tribucion de frecuencias? ¿Como afecta la intensidad de la friccion vis-
       cosa el decaimiento en espiral?
 
 FECHA: 14 de Mayo 2018.
 
 El dia de hoy se implemento la primera runtina completa que calcula la DFT de la
-se�al generada utilizando rk4. Los resultados muestran que con las condiciones
+señal generada utilizando rk4. Los resultados muestran que con las condiciones
 iniciales planteadas, y el forzamiento, la potencia se concentra en un pico
 ubicado a muy baja frecuencia. Aunque esto pareciera ser consistenete con el re-
 gimen no caotico descrito en el archivo 06-espectroOscFFT.pdf los datos no son
@@ -312,14 +312,14 @@ IMPORTANTE: Investigar con detenimiento el calculo de la distribucion de poten-
 Se realizo un muestreo con los siguientes parametros:
 
    	      	              NSTEPS = 100000
-			      							dt = 0.0008
-			      							y0 = 0.75*pi
-			      							v0 = 0.0
-			      							f_samp = 1/dt
-			      							w = 4.56
-			      							q = 0.98
-			      							u = 4.87
-			      							Fd = 2.95
+			      dt = 0.0008
+			      y0 = 0.75*pi
+			      v0 = 0.0
+			      f_samp = 1/dt
+			      w = 4.56
+			      q = 0.98
+			      u = 4.87
+			      Fd = 2.95
 
 A partir del programa, se genero la grafica powdist_Fd_2.95.pdf. En esta, se ob-
 serva el fenomeno advertido el dia 13 de Mayo. Sin embargo, se guarda reserva
@@ -337,14 +337,14 @@ ultimo, se observo un decaimiento en espiral desordenado para el caso forzado.
 Los parametros para generar las graficas en phase_space_comp.pdf fueron:
 
    	      	              NSTEPS = 100000
-			      							dt = 0.0008
-			      							y0 = 0.75*pi
-			      							v0 = 0.0
-			      							f_samp = 1/dt
-			      							w = 4.7
-			      							q = 0.2*w
-			      							u = 1.25*w
-			      							Fd = 1.75
+			      dt = 0.0008
+			      y0 = 0.75*pi
+			      v0 = 0.0
+			      f_samp = 1/dt
+			      w = 4.7
+			      q = 0.2*w
+			      u = 1.25*w
+			      Fd = 1.75
 
 En cuanto al espectro de frecuencias, los resultados son un tanto extraños. Por
 un lado, la distribucion de frecuencias para el pendulo sin amortiguamiento y
