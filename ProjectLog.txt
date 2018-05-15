@@ -1,86 +1,86 @@
-BITÁCORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
+BITï¿½CORA PROYECTO FINAL HERRAMIENTAS COMPUTACIONALES
 
 FECHA INICIO: 2 de Mayo 2018.
 FECHA FIN: ------------------
 
-DESCRIPCIÓN: El presente archivo contiene el registro de todas las tareas y ac-
+DESCRIPCIï¿½N: El presente archivo contiene el registro de todas las tareas y ac-
 	     ciones llevadas a cabo para resolver el problema descrito en el
-	     archivo Readme.txt. Estos se llevan por fecha. También se encuentra
+	     archivo Readme.txt. Estos se llevan por fecha. Tambiï¿½n se encuentra
 	     un listado de tareas a realizar, y su respectiva fecha de inicio y
-	     fecha de finalización.
+	     fecha de finalizaciï¿½n.
 
 TAREAS PRINCIAPALES:
 
-1) RESOLVER LA ECUACIÓN DE MOVIMIENTO DEL PÉNDULO NO LINEAL FORZADO:
+1) RESOLVER LA ECUACIï¿½N DE MOVIMIENTO DEL Pï¿½NDULO NO LINEAL FORZADO:
 
-   SUBTAREAS: 1 Documentarse sobre al menos tres métodos de solución de ecua-
-   	        siones diferenciales en mecánica. Bibliografía sugerida: Libros
-		de métodos numéricos en Drive personal de Diego Herrera.
+   SUBTAREAS: 1 Documentarse sobre al menos tres mï¿½todos de soluciï¿½n de ecua-
+   	        siones diferenciales en mecï¿½nica. Bibliografï¿½a sugerida: Libros
+		de mï¿½todos numï¿½ricos en Drive personal de Diego Herrera.
 
 		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
-	      2 Implementar el algoritmo más apropiado de acuerdo con los crite-
+	      2 Implementar el algoritmo mï¿½s apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implementar los 3,
-		tan solo los 2 más eficientes en el papel. EN LENGUAJE C.
+		tan solo los 2 mï¿½s eficientes en el papel. EN LENGUAJE C.
 
 		FECHA INICIO: 2 de Mayo 2018.
 		FECHA FIN:
 
-	      3 Resolver la EDM, utilizando los dos algortimos y comparar según
+	      3 Resolver la EDM, utilizando los dos algortimos y comparar segï¿½n
 	      	criterios de: efectividad, eficiencia. Si es necesario, realizar
-		un análisis de error comparando, por ejemplo, con el límite de
-		linealidad del péndulo. Escoger un método y justificar
+		un anï¿½lisis de error comparando, por ejemplo, con el lï¿½mite de
+		linealidad del pï¿½ndulo. Escoger un mï¿½todo y justificar
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      4 Obtener gráficas del movimiento simulado para distintos forza-
-	      	mientos. Incluir una gráfica sin forzamiento para comparar.
+	      4 Obtener grï¿½ficas del movimiento simulado para distintos forza-
+	      	mientos. Incluir una grï¿½fica sin forzamiento para comparar.
 		Las graficas deben ser en el espacio de fases, y desplazamiento
 		en el tiempo.
 
-		BONUS: Para la presentación, generar animaciones.
+		BONUS: Para la presentaciï¿½n, generar animaciones.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
-	      	ción para obtener resultados más rápido
+	      	ciï¿½n para obtener resultados mï¿½s rï¿½pido
 
 		FECHA INICIO:
 		FECHA FIN:
 
-2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
+2) REALIZAR EL MUESTRO DE LAS SEï¿½ALES PARA ANALISIS DEL RUIDO:
 
-   SUBTAREAS: 1 Documentarse sobre la librería FFTW e implementar una subrutina
+   SUBTAREAS: 1 Documentarse sobre la librerï¿½a FFTW e implementar una subrutina
    	      	que calcule la DFT de un conjunto de datos, y la potencia.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN: 14 de Mayo 2018.
 
-	      2 Generar las señales utilizando la rutina de solución de la EDM,
-	      	y realizar análisis de Fourier con la rutina de la subtarea an-
-		terior. Obtener gráficas de potencia en el espectro frecuencias.
+	      2 Generar las seï¿½ales utilizando la rutina de soluciï¿½n de la EDM,
+	      	y realizar anï¿½lisis de Fourier con la rutina de la subtarea an-
+		terior. Obtener grï¿½ficas de potencia en el espectro frecuencias.
 
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN:
 
 	      3 Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
-	      	y obtener las gráficas en el mismo. Estudiar el fenómeno de mez-
-		cla descrito en la discusión del problema.
+	      	y obtener las grï¿½ficas en el mismo. Estudiar el fenï¿½meno de mez-
+		cla descrito en la discusiï¿½n del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      4 Estudiar el mínimo de "doblamiento" de periodo con detalle (ver
+	      4 Estudiar el mï¿½nimo de "doblamiento" de periodo con detalle (ver
 	      	archivo 06-espectroOscFFT.pdf). Resolver el punto 3 y obtener
-		las gráficas correspondientes.
+		las grï¿½ficas correspondientes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      5 Resolver puntos 4 y 5. SObre este último hacer una consulta más
+	      5 Resolver puntos 4 y 5. SObre este ï¿½ltimo hacer una consulta mï¿½s
 	      	detallada en lo relativo al modelo de Lorentz.
 
 		FECHA INICIO:
@@ -88,145 +88,145 @@ TAREAS PRINCIAPALES:
 
 	      6 Producir un archivo de texto que resuma las observaciones hechas
 	      	durante todo el proceso. Concluir especialmente sobre la rela-
-		ción entre el ruido y el caos.
+		ciï¿½n entre el ruido y el caos.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 3) ANALIZAR LOS DATOS Y RESULTADOS:
 
-   SUBTAREAS: 1 Investigar sobre los fundamentos de la teoría del caos. En es-
-   	        pecial, qué significa caos en física y cuáles son las formas de
-		medir el caos en un sistema dinámico. Producir un archivo de
-		texto con la información encontrada, incluyendo referencias.
+   SUBTAREAS: 1 Investigar sobre los fundamentos de la teorï¿½a del caos. En es-
+   	        pecial, quï¿½ significa caos en fï¿½sica y cuï¿½les son las formas de
+		medir el caos en un sistema dinï¿½mico. Producir un archivo de
+		texto con la informaciï¿½n encontrada, incluyendo referencias.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 	      2 Realizar un nuevo muestreo a la luz de los conceptos adquiridos
-	      	si es necesario. Generar las gráficas pertinentes.
+	      	si es necesario. Generar las grï¿½ficas pertinentes.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Comparar los régimenes caóticos, no caóticos e intermitentes del
-	      	sistema en términos de las variables adecuadas (según la subta-
+	      3 Comparar los rï¿½gimenes caï¿½ticos, no caï¿½ticos e intermitentes del
+	      	sistema en tï¿½rminos de las variables adecuadas (segï¿½n la subta-
 		rea anterior).
 
 	        FECHA INICIO:
 	      	FECHA FIN:
 
-	      4 Relacionar los conceptos de caos y ruido para sistemas dinámi-
-	      	cos a partir del péndulo no lineal. Considerar explícitamente
-		por qué el análisis de Fourier fue utilizado para resolver el
+	      4 Relacionar los conceptos de caos y ruido para sistemas dinï¿½mi-
+	      	cos a partir del pï¿½ndulo no lineal. Considerar explï¿½citamente
+		por quï¿½ el anï¿½lisis de Fourier fue utilizado para resolver el
 		problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-3) GENERAR EL ARTÍCULO FINAL:
+3) GENERAR EL ARTï¿½CULO FINAL:
 
    SUBTAREAS: 1 Generar el archivo .tex y crear la plantilla apropiada para la
-   	      	construcción del artículo. Redactar la introducción.
+   	      	construcciï¿½n del artï¿½culo. Redactar la introducciï¿½n.
 
 		FECHA INCIO:
 		FECHA FIN:
 
-	      2 Construir un archivo de texto con el fundamento teórico necesa-
+	      2 Construir un archivo de texto con el fundamento teï¿½rico necesa-
 	      	rio para informar al lector sobre los conceptos involucrados en
-		la solución del problema.
+		la soluciï¿½n del problema.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Consolidar las gráficas y datos pertinentes para presentar en el
-	      	artículo. Especial énfasis en el estilo de las imágenes y en la
-		precisión de los datos utilizados.
+	      3 Consolidar las grï¿½ficas y datos pertinentes para presentar en el
+	      	artï¿½culo. Especial ï¿½nfasis en el estilo de las imï¿½genes y en la
+		precisiï¿½n de los datos utilizados.
 
 		FECHA INICIO:
 		FECHA FIN:
 
 	      4 Realizar una lectura detallada de las acciones y eventualidades
-	      	presentadas a lo largo del proceso de solución del problema.
-		Repasar el arcivo de texto con las conclusiones y en análisis de
+	      	presentadas a lo largo del proceso de soluciï¿½n del problema.
+		Repasar el arcivo de texto con las conclusiones y en anï¿½lisis de
 		datos producidos en la tarea anterior. Producir un archivo de
-		texto con el análisis de datos y conclusiones definitivas.
+		texto con el anï¿½lisis de datos y conclusiones definitivas.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      5 Extraer de los archivos de texto creados la información perti-
-	      	nente y agregarla al archivo .tex. Incluir gráficas corregidas
+	      5 Extraer de los archivos de texto creados la informaciï¿½n perti-
+	      	nente y agregarla al archivo .tex. Incluir grï¿½ficas corregidas
 		y revisadas.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      6 Realizar revisiones de estilo y presentación del artículo. Co-
-	      	rregir errores de estilo, de ortografía, o de referencias. Con-
-		solidar el artículo para entregar.
+	      6 Realizar revisiones de estilo y presentaciï¿½n del artï¿½culo. Co-
+	      	rregir errores de estilo, de ortografï¿½a, o de referencias. Con-
+		solidar el artï¿½culo para entregar.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-4) PREPARAR PRESENTACIÓN AL GRUPO:
+4) PREPARAR PRESENTACIï¿½N AL GRUPO:
 
    SUBTAREAS: 1 Con base en los archivos de texto, crear diapositivas con los
-   	        contenidos más importantes del proyecto:
+   	        contenidos mï¿½s importantes del proyecto:
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      2 Introducir las gráficas utilizadas en el artículo. Si fue posi-
-	      	ble, agregar la animación.
+	      2 Introducir las grï¿½ficas utilizadas en el artï¿½culo. Si fue posi-
+	      	ble, agregar la animaciï¿½n.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-	      3 Realizar una reunión de grupo para repartir contenidos en la ex-
-	      	posición. Realizar una evaluación crítica de la forma como cada
+	      3 Realizar una reuniï¿½n de grupo para repartir contenidos en la ex-
+	      	posiciï¿½n. Realizar una evaluaciï¿½n crï¿½tica de la forma como cada
 		uno de los integrantes expone.
 
 		FECHA INICIO:
 		FECHA FIN:
 
-ENTRADAS BITÁCORA PROYECTO:
+ENTRADAS BITï¿½CORA PROYECTO:
 
 FECHA ENTRADA: 2 de Mayo 2018.
 
-El día de hoy se realizó el cronograma de actividades para el desarrollo del
-proyecto. Se creó un repositorio en GitHub para consolidar todos los archivos,
-gráficas y datos necesarios para reconstruir el proceso de solución del proble-
-ma. Además, se dió inicio a la subtarea 1.1.
+El dï¿½a de hoy se realizï¿½ el cronograma de actividades para el desarrollo del
+proyecto. Se creï¿½ un repositorio en GitHub para consolidar todos los archivos,
+grï¿½ficas y datos necesarios para reconstruir el proceso de soluciï¿½n del proble-
+ma. Ademï¿½s, se diï¿½ inicio a la subtarea 1.1.
 
 Es claro que el problema de la tarea 1 es resolver una EDO con condiciones ini-
-ciales. Por lo tanto, nos interesan rutinas encaminadas a encontrar la solución
+ciales. Por lo tanto, nos interesan rutinas encaminadas a encontrar la soluciï¿½n
 de un problema de valor inicial de la forma:
 
       	       	  		y'(t) = f(t,y)
 
-NOTA: En general, esta ecuación puede representar un sistema de ecuaciones dife-
+NOTA: En general, esta ecuaciï¿½n puede representar un sistema de ecuaciones dife-
       renciales no lineal.
 
-Como la ecuación de interés no es de primer orden, sino de segundo orden, es ne-
+Como la ecuaciï¿½n de interï¿½s no es de primer orden, sino de segundo orden, es ne-
 cesario reescribir el sistema como:
 
 				 y'(t) = v(t)
 		    v'(t) = -w*sin(y) - q*v + Fd*sin(u*t)
 
-El cual no solo es un sistema de ecuaciones no lineal, sino que además no es au-
-tónomo. Dentro del póquer de algoritmos de los que se puede hacer uso para solu-
+El cual no solo es un sistema de ecuaciones no lineal, sino que ademï¿½s no es au-
+tï¿½nomo. Dentro del pï¿½quer de algoritmos de los que se puede hacer uso para solu-
 cionar este sistema se encuentran:
 
 			    - Stormer Verlet.
 			    - Leapfrog.
 			    - Runge-Kutta 4.
 
-MÉTODO RK4:
+Mï¿½TODO RK4:
 
-El algoritmo básico consiste en la creación de un vector que contenga las varia-
+El algoritmo bï¿½sico consiste en la creaciï¿½n de un vector que contenga las varia-
 bles dependientes del sistema (y(t),v(t)) y otro con sus derivadas (y'(t),v'(t))
-y a partir de estos, realizar los siguientes pasos de integración:
+y a partir de estos, realizar los siguientes pasos de integraciï¿½n:
 
     	      	     	      k1 = f(tn,yn)
 		     k2 = f(tn + 0.5*h,yn + 0.5*h*k1)
@@ -236,10 +236,10 @@ y a partir de estos, realizar los siguientes pasos de integración:
 	      y_(n+1) = yn + (1/6)*h*(k1 + 2*k2 + 2*k3 + k4)
 
 Los primeros pasos son intermedios para aproximar mejor el valor de y(tn), y
-solo el último paso representa el avance en el tiempo del sistema. h es el paso
-de integración de modo que tn = t_(n-1) + h. Se ha implementado este algoritmo
+solo el ï¿½ltimo paso representa el avance en el tiempo del sistema. h es el paso
+de integraciï¿½n de modo que tn = t_(n-1) + h. Se ha implementado este algoritmo
 en lenguaje C, y se han obtenido resultados satisfactorios para un oscilador
-armónico con parámetros:
+armï¿½nico con parï¿½metros:
 
 			Frecuencia: 4.56
 			Paso de tiempo: 0.008
@@ -250,21 +250,21 @@ armónico con parámetros:
 FEHCA ENTRADA: 13 de Mayo 2018.
 
 El dia de hoy se modularizo completamente la rutina que implementa rk4 en len-
-guaje C. Se obtuvieron graficas que lamentablemente no pudieron se exportadas 
+guaje C. Se obtuvieron graficas que lamentablemente no pudieron se exportadas
 a pdf. Sin embargo se realizo una observacion interesante:
 
        El sistema tiene un comportamiento caotico en sus etapas ini-
        ciales de moviemiento. Posteriormente, el movimeinto es casi
        armonico simple. En el espacio de fases, las trayectorias son
        espirales que tienden a cerrarse en lo que parese una trayec-
-       toria tìpica de un oscilador armonico.
+       toria tï¿½pica de un oscilador armonico.
 
-Se realizaron simulaciones que consideraban pequeñas desviaciones de la posici-
+Se realizaron simulaciones que consideraban pequeï¿½as desviaciones de la posici-
 cion de equilibrio y0 = 0. No se observaron diferencias dramaticas en las tra-
 yectorias en el espacio de fases. Sin embargo, el movimiento es bastante impre-
 decible y muy "desordenado" cuando el sistema se encuentra en la fase transien-
 te. Se manejaron condiciones iniciales yi != 0.0 y vi = 0.0. Esto corresponde a
-un desplazamiento de la posicion de equilibrio 
+un desplazamiento de la posicion de equilibrio
 
 IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
 	    cias de las condiciones iniciales. Debido a la presencia de fric-
@@ -273,7 +273,7 @@ IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
 	    trayectoria pseudo-armonica observada. Esta ultima, correpondiente
 	    a la elipse apreciada cuando ha transcurrido mucho tiempo.
 
-	    Un analisis rapido muestra que, para un movimiento armonico, las 
+	    Un analisis rapido muestra que, para un movimiento armonico, las
 	    trayectorias (en el espacio de fases) correspondientes son elipses
 	    cuya razon entre semiejes es proporcional a la frecuencia. Si v se
 	    toma en el eje vertica, e y en la horizontal, la razon entre los
@@ -282,24 +282,24 @@ IMPORTANTE: Seria interesante analizar como depende la distribucion de frecuen-
 	    Cuando se considera el movimiento caotico, este parace corresponder
 	    (aproximadamente) a elipses "decayentes". Es decir, como si el osci-
 	    lador, al caer en la espiral de las trayectorias del espacio de fa-
-	    ses, pasara por elipses cuyos semiejes son cada vez mas pequeños.Por
+	    ses, pasara por elipses cuyos semiejes son cada vez mas pequeï¿½os.Por
 	    tanto, el espectro de frecuencias esperado, pareciera ser una dis-
 	    tribucion con un pico en la frecuencia correspondiente al estado es-
 	    tacionario inducido por el forzamiento, y unos picos menores distri-
 	    buidos principalmente hacia las frecuencias inferiores. Esto se de-
-	    duce al observar que en el decaimiento een espiral, las "elipses 
+	    duce al observar que en el decaimiento een espiral, las "elipses
 	    decayentes" son mas alargadas hacia el eje y.
 
 NOTA: Analizar el comportamiento sin friccion y sin forzamiento, y comparar.
-      ¿Siguen siendo espirales las trayectorias? ¿Como seria el espectro de fre-
-      cuencias en cada caso? ¿Influye la intensiadad del forzamiento en la dis-
-      tribucion de frecuencias? ¿Como afecta la intensidad de la friccion vis-
+      ï¿½Siguen siendo espirales las trayectorias? ï¿½Como seria el espectro de fre-
+      cuencias en cada caso? ï¿½Influye la intensiadad del forzamiento en la dis-
+      tribucion de frecuencias? ï¿½Como afecta la intensidad de la friccion vis-
       cosa el decaimiento en espiral?
 
 FECHA: 14 de Mayo 2018.
 
 El dia de hoy se implemento la primera runtina completa que calcula la DFT de la
-señal generada utilizando rk4. Los resultados muestran que con las condiciones
+seï¿½al generada utilizando rk4. Los resultados muestran que con las condiciones
 iniciales planteadas, y el forzamiento, la potencia se concentra en un pico
 ubicado a muy baja frecuencia. Aunque esto pareciera ser consistenete con el re-
 gimen no caotico descrito en el archivo 06-espectroOscFFT.pdf los datos no son
@@ -312,16 +312,58 @@ IMPORTANTE: Investigar con detenimiento el calculo de la distribucion de poten-
 Se realizo un muestreo con los siguientes parametros:
 
    	      	              NSTEPS = 100000
-			      dt = 0.0008
-			      y0 = 0.75*pi
-			      v0 = 0.0
-			      f_samp = 1/dt
-			      w = 4.56
-			      q = 0.98
-			      u = 4.87
-			      Fd = 2.95
+			      							dt = 0.0008
+			      							y0 = 0.75*pi
+			      							v0 = 0.0
+			      							f_samp = 1/dt
+			      							w = 4.56
+			      							q = 0.98
+			      							u = 4.87
+			      							Fd = 2.95
 
 A partir del programa, se genero la grafica powdist_Fd_2.95.pdf. En esta, se ob-
 serva el fenomeno advertido el dia 13 de Mayo. Sin embargo, se guarda reserva
 sobre las conclusiones puesto que los resultados no concuerdan con lo observado
 en el archivo mencionado arriba.
+
+FECHA: 15 de Mayo 2018.
+
+El dia de hoy se realizaron graficas comparativas en el espacio de fases de los
+movimientos sin amortiguamiento, con subamortiguamiento, y con forzamiento. Se
+logro observar un comportamiento oscilatorio periodico (aunque no armonico) pa-
+la el pendulo sin amortiguamiento. Por el contrario, se observo un comporta-
+miento que simulaba un decaimiento en espiral para el caso subamortiguado. Y por
+ultimo, se observo un decaimiento en espiral desordenado para el caso forzado.
+Los parametros para generar las graficas en phase_space_comp.pdf fueron:
+
+   	      	              NSTEPS = 100000
+			      							dt = 0.0008
+			      							y0 = 0.75*pi
+			      							v0 = 0.0
+			      							f_samp = 1/dt
+			      							w = 4.7
+			      							q = 0.2*w
+			      							u = 1.25*w
+			      							Fd = 1.75
+
+En cuanto al espectro de frecuencias, los resultados son un tanto extraÃ±os. Por
+un lado, la distribucion de frecuencias para el pendulo sin amortiguamiento y
+sin forzamiento, presenta un pico elevado, consistente con la naturaleza perio-
+dica del movimiento. Llama la atencion que el movmiento parece tener una compo-
+nente muy fuerte en la frecuecia natural del sistema (g/l).
+
+Cuando se analizael pendulo subamortiguado, se observan componentes con frecuen-
+cias menores que la frecuencia natural del sistema (en el intervalo [0.0:2.0]).
+Se observa una muy pequeÃ±a componente alrededor de 2.5Hz. Es probabale que sea
+un error metodologico en el muestreo, pero se observa una funcion bastante sua-
+ve, creciente hasta que enecuentra su maximo alrededor de la frecuencia natural
+del sistema, y luego rapidamente decreciente.
+
+Por ultimo, el caso forzado presenta similaridades al caso subamortiguado. Las
+principales diferencias son la aparicion de una componente en la region cercana
+a la frecuencia de forzamiento (pico agudo a 5.76Hz aprox.), y una mayor presen-
+cia de componentes en el intervalo [0.0:0.2]. Es to ultimo se observa en que
+el area bajo la curva de esta parte del espectro es mayor.
+
+Graficas analogas a aquellas en el archivo 06-espectroOscFFT.pdf, no se han po-
+dido obtener. Se espera consultar el dia de maÃ±ana con el profesor.
