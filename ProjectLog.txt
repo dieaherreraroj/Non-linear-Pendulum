@@ -18,22 +18,22 @@ TAREAS PRINCIAPALES:
 		de metodos numericos en Drive personal de Diego Herrera.
 
 		FECHA INICIO: 2 de Mayo 2018.
-		FECHA FIN:
+		FECHA FIN: 12 de Mayo 2018.
 
 	      2 Implementar el algoritmo mas apropiado de acuerdo con los crite-
 	      	rios encontrados para la EDM. No es necesario implementar los 3,
 		tan solo los 2 mas eficientes en el papel. EN LENGUAJE C.
 
 		FECHA INICIO: 2 de Mayo 2018.
-		FECHA FIN:
+		FECHA FIN: 15 de Mayo.
 
 	      3 Resolver la EDM, utilizando los dos algortimos y comparar segun
 	      	criterios de: efectividad, eficiencia. Si es necesario, realizar
 		un analisis de error comparando, por ejemplo, con el limite de
 		linealidad del pendulo. Escoger un metodo y justificar
 
-		FECHA INICIO:
-		FECHA FIN:
+		FECHA INICIO: 2 de Mayo 2018
+		FECHA FIN: 2 de Mayo 2018
 
 	      4 Obtener graficas del movimiento simulado para distintos forza-
 	      	mientos. Incluir una grafica sin forzamiento para comparar.
@@ -43,7 +43,7 @@ TAREAS PRINCIAPALES:
 		BONUS: Para la presentacion, generar animaciones.
 
 		FECHA INICIO: 14 de Mayo 2018.
-		FECHA FIN:
+		FECHA FIN: 14 de Mayo 2018
 
 	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
 	      	cion para obtener resultados mas rapido
@@ -246,6 +246,11 @@ armonico con parametros:
 			# Pasos: 1000
 			Vel. Inicial: 2.0
 			Pos. Inicial: 0.0
+
+Los otros metodos propuestos se aplican solo a sistemas conservativos. Debido a
+la presencia de friccion viscosa y forzamiento externo dependiente del tiempo,
+no es posible utilizar estos algortimos. Por lo tanto, el proyecto se basa en
+la solucion de la EDO utilizando rk4.
 
 FEHCA ENTRADA: 13 de Mayo 2018.
 
