@@ -252,6 +252,9 @@ la presencia de friccion viscosa y forzamiento externo dependiente del tiempo,
 no es posible utilizar estos algortimos. Por lo tanto, el proyecto se basa en
 la solucion de la EDO utilizando rk4.
 
+REFERENCIAS: Computational Methods for Physicists. Simon Sirca.
+	     Wikipedia. Leapfrog Integration.
+
 FEHCA ENTRADA: 13 de Mayo 2018.
 
 El dia de hoy se modularizo completamente la rutina que implementa rk4 en len-
@@ -372,3 +375,94 @@ el area bajo la curva de esta parte del espectro es mayor.
 
 Graficas analogas a aquellas en el archivo 06-espectroOscFFT.pdf, no se han po-
 dido obtener. Se espera consultar el dia de mañana con el profesor.
+
+COMENTARIO TEORICO SOBRE EL ANALISIS DE FOURIER
+
+Una grana cantidad de problemas computacionales se engloban en la denominacion
+general de METODOS ESPECTRLES. Estos requieren en mayor o menor medida, el com-
+puto de la Transformada de Fourier de una señal (funcion periodica). Un proce-
+so fisico puede describirse en el dominio del tiempo, o en dominio de las fre-
+cuencias. i.e.
+
+	  Una señal provenienete de un sistema fisico pude descom-
+	  ponerse en señales sinusoidales simples con frecuencias
+	  distribuidas de forma continua (en general).
+
+Este resultado se denomina teorema de Fourier. La distribucion de la señal en el
+dominio del tiempo y de la frecuencia se relacionan por medio de la Transformada
+de Fourier y su Transformada inversa.
+
+IMPORTANTE: De acuerdo con la convencion en el libro Numerical Receipes, el fac-
+	    tor de normalizacion se utiliza para cambiar de la frecuencia angu-
+	    lar a la frecuencia (1/T).
+
+Se define la FUNCION DE CORRELACION como la convolucion entre dos funciones h y
+g, i.e., Corr(g,h). Por propiedades de la TF, se sabe que la transformada de la
+Corr(h,g) es el producto de sus transformadas.
+
+IMPORTANTE: La Autocorrelacion es proporcional a la distribucion de potencia en
+	    el dominio de as frecuencias. Esto es una consecuencia del teorema
+	    de Parseval (Teorema de Plancherel).
+
+Se define la DENSIDAD ESPECTRAL DE PODER de h como una funcion para frecuencias
+positivas que suma la potencia asociada a -f y f al tiempo (ver Numerical Recei-
+pes). La componente asociada a f = 0 se llama componente DC.
+
+IMPORTANTE: La DSP (Densidad Espectral de Poder), para funciones reales es sim-
+	    plemente dos veces la norma de la TF.
+
+Cuando se realiza muestreo de funciones continuas a una frecuencia s, se presen-
+ta un fennomeno llamado ALIASING, en el cual frecuencias mayores a una cierta
+frecuencia de corte llamada FRECUENCIA DE NYQUIST de valor 0.5*s son interpre-
+tadas como componentes de frecuencias menores en el intervalo (-fc:fc).
+
+IMPORTANTE: Esto es una consecuencia directa de realizar un muestreo discreto.
+	    Ver figura 12.1.1 de Numerical Receipes. La Transformada calculada
+	    a partir del muestreo discreto tiene una "deformacion" causada por
+	    la mala etiquetacion de frecuencias mayores a a la frecuencia de
+	    Nyquist dentro del intervalo (-fc:fc).
+
+Para evitar el problema del aliasing, podemos dar un estimativo muy preciso de
+la banda de frecuencias en la que encuentra el grueso de la DSP, o simplemen-
+te realizar procesos de filtro de las frecuencias altas. Sin embargo, un punto
+de vista muy util es asumir que, siempre que el muestreo se halla hecho correc-
+tamente, la TF de la señal es cero fuera del rango determinado por la frecuencia
+de Nyquist.
+
+IMPORTANTE: Por propiedades de la TF de funciones integrables, esta debe ser tal
+	    que, para frecuencias suficientemente altas, la DSP tiende a cero.
+	    Una forma de nptar aliasing es observar si en los lìmites del rango
+	    de Nyquist la TF tiende a cero. En caso contrario, es posible que
+	    frecuencias altas se estan contando dentro del intervalo critico.
+	    Ver figura 12.1.1 de la secc. 12.1 de Numerical Receipes.
+
+En ese orden de ideas, es posible estimar la TF de una funcion a partir de un
+numero finito de datos (sen estos N en numero), en el rango de frecuencias dis-
+creto dentro del intervalo de frecuencias critico dado por la frecuencia de Ny-
+quist. Asi se obtiene un resultado importante al aproximar la TF por medio de
+una suma finita:
+
+    	 La TF en las distintas frecuencias discretas dadas a partir
+	 de la frecuencia de mustreo (dentro del intervalo critico)
+	 es igual al periodo de muestreo por la DFT, la cual mapea
+	 N numero complejos en N nuero complejos a partir de la base
+	 de Fourier.
+
+NOTA: Para ver la definicion consultar ecn. 12.1.7 en Numerical Receipes. De ahi
+      es calro que el intervalo critico puede mapearse corriendo el indice de la
+      transformada a 0 terminando en N-1.
+
+IMPORTANTE: Para mapear el espectro completo de Frecuencias, es necesario tener
+	    en cuenta que la mitad del DFT corresponde a las frecuencias en el
+	    intervalo (0:fc); mientras que la otra mitad a (-fc:0). El punto me-
+	    dio corresponde exacatamente a la frecuencia de corte.
+
+NOTA: Esto implica una correccion en el codigo. Es necesario sumar la otra mitad
+      del espectro para tener la DSP completa. (?) Corregir la normalizacion, el
+      espectro de poder viene dividido por sqrt(N).
+
+El algoritmo de la FFT sirve para calcular la DFT de un arreglo de forma recur-
+siva, dividiendo sucesivas DFT en transformadas de las componentes con indice
+par e impar del arreglo considerado (ver secc. 12.2 de NUmerical Receipes). Es-
+te es mas eficiente si el tamaño de los vectores a transformar en una potencia
+entera de 2.
