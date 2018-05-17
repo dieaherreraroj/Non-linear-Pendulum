@@ -466,3 +466,69 @@ siva, dividiendo sucesivas DFT en transformadas de las componentes con indice
 par e impar del arreglo considerado (ver secc. 12.2 de NUmerical Receipes). Es-
 te es mas eficiente si el tamaño de los vectores a transformar en una potencia
 entera de 2.
+
+FECHA ENTRADA: 17 de Mayo 2018.
+
+El dia de hoy se consideraron de mejor forma los parametros de forzamiento y de
+condciones iniciales. Se fijaron las siguuientes condiciones iniciales basicas
+y parametros de movimiento en terminos de los cuales se expresan las demas como
+porcentaje relativo. Estos son:
+
+	   	     FRECUENCIA NATURAL: 0.7257 Hz
+		     POSICION INICIAL: 3*m_pi/8
+		     VELOCIDAD BASE: w*x0
+		     AMP. FORZ.: Variable 
+
+Se obtuvo graficas en el espacio de fases para el pendulo sin amortiguamiento,
+tanto forzado como no forzado.
+
+PENDULO SIN AMROTIGUAMIENTO NI FORZAMIENTO:
+
+Se establecio que el movimeinto es periodico, independientemete de la intensidad
+de la velocidad inicial, para la posicion inicial dada. De hecho, el movimiento
+sigue siendo periodico para angulos mayores que pi/2, pero no para todas las ve-
+locidades iniciales. Esto se debe a que el pendulo tiene suficiente energia para
+sobrepasar la posisicon de equilibrio inestable y = pi, y dada la conservacion
+de la energia, continua dando vueltas sin parar.
+
+En el espacio de fases se observan figuras muy similares a elipses. De hecho, no
+se aprecia a simple vista la diferencia entre las figuras obtenidas y las elip-
+ses. Esto se refleja en el espectro de frecuencias como un pico muy pronunciado
+en la frecuencia natural del sistema.
+
+PENDULO SIN AMORTIGUAMIENTO Y FORZADO:
+
+Estudiamos las intensidades de forzamiento: Fd = 0.5, 0.75, 1.0, 1.25.
+
+	            FREC. FORZAMIENTO: 1.25*w 
+
+En general, el espacio de fases se observa como un conjuto de elipses superpues-
+tas de forma desordenada. El comportamiento caotico del sistema se infiere en
+este comportamiento.
+
+Para Fd = 0.5: El espectro de frecuencias no difiere mucho del espectro para el
+       	       pendulo no forzado. Se observa un pico en la frecuencia natural
+	       del sistema. No aparece una comonente realacionada con la fre-
+	       cuencia de forzamiento. En este rango, incluso hasta una inten-
+	       sidad de Fd = 1.0, no se observa diferencia entre el espectro
+	       del pendulo sin forzamiento, y con forzamiento.
+
+Para Fd > 2.0: Se observa la aparicion de una pequeña componente alrededor de
+     	       la frecuencia de forzamiento. Sin embargo, la unica componente
+	       dominante se encuentra en la frecuencia natrural del sistema.
+	       Para Fd = 3.0, el espectro cambia drasticamente, la componete
+	       principal esta ahora en la frecuencia de forzamiento, y aparece
+	       una componente importante en el espectro cerca de 0.4 Hz. La com-
+	       ponente de la fecuencia natrural es tremendamente disminuida. La
+	       aparicion de la componente a 0.4 Hz sucede para Fd > 2.5 (aprox).
+
+En el rando de 2.0 < Fd < 10.0, se observan tres comopnentes principales:
+
+      	       	   1) Frecuencia natural del sistema.
+		   2) Frecuencia de forzamiento.
+		   3) Frecuencia "inducida".
+
+El espectro de frecuencias se va corriendo hacia el cero para Fd > 10. En gene-
+ral, la componente "inducida" se va corriendo hacia el cero como Fd tiende a 10.
+
+
