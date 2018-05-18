@@ -6,21 +6,22 @@
 /*******************************GLOBAL VARIABLES OF MOTION*********************/
 
 double w = 4.56;
-double q = 0.98;
-double u = 20.87;
-double Fd = 0.95;
+double q = 0.5*4.56;
+double u = 1.00*4.56;
+double Fd = 0.0;
 
 /***********************************AUXILIAR ROUTINES**************************/
 
 void copy_vect(int n, double *y, double *x);
 void aux_interm(int n, int tag, double h, double *x, double *y, double *z);
-void f(double t, double *y);
+double f(int comp, double t, double *y);
 void update_kvect(int n, int tag, double h, double t, double *y, double *ki, double *kf);
 void init_vector(int n, double *y, double x0, double v0);
 
 /***********************************ANALISIS ROUTINES**************************/
 
 void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
+void leap_frog(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
 void FFTW_Analize(int n, double *x, double *p);
 
 /***********************************IMPLEMENTATIONS****************************/
@@ -41,31 +42,34 @@ void aux_interm(int n, int tag, double h, double *x, double *y, double *z){
       z[ii] = x[ii] + h*y[ii];
 }
 
-void f(double t, double *y){
-  double a[2];
-  a[0] = y[1];
-  a[1] = -w*sin(y[0]) - q*y[1] + Fd*sin(u*t);
-
-  y[0] = a[0];
-  y[1] = a[1];
+double f(int comp, double t, double *y){
+  if(comp == 0)
+    return y[1];
+  if(comp == 1)
+    return -w*w*sin(y[0]) - q*y[1] - Fd*sin(y[2]);
+  if(comp == 2)
+    return u;
+  else
+    return 0.0;
 }
 
 void update_kvect(int n, int tag, double h, double t, double *y, double *ki, double *kf){
   double *aux = (double*) calloc(n,sizeof(double));
+  double t_aux = 0.0;
+  if(tag == 1) t_aux = t;
+    else if(tag == 2 || tag == 3) t_aux = t + 0.5*h;
+      else if(tag == 4) t_aux = t + h;
+  else t_aux = 0.0;
   aux_interm(n,tag,h,y,ki,aux);
-  if(tag == 1)
-    f(t,aux);
-  if(tag == 2 || tag == 3)
-    f(t+0.5*h,aux);
-  if(tag == 4)
-    f(t+h,aux);
-  copy_vect(n,aux,kf);
+  for(int ii = 0; ii<n; ii++)
+    kf[ii] = f(ii,t_aux,aux);
   free(aux);
 }
 
 void init_vector(int n, double *y, double x0, double v0){
   y[0] = x0;
   y[1] = v0;
+  y[2] = 0.0;
 }
 
 /*****************************MAIN IMPLEMENTATIONS*****************************/
@@ -88,7 +92,7 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
     update_kvect(n,4,dt,t,y,k3,k4);
     for(int jj = 0; jj<n; jj++){
       y[jj] += (1.0/6.0)*dt*(k1[jj] + k4[jj] + 2.0*(k2[jj] + k3[jj]));
-      //printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,y[0],y[1]);
+      printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,fmod(y[0],2*M_PI),y[1]);
     }
     x[ii] = y[0];
   }
