@@ -5,10 +5,10 @@
 
 /*******************************GLOBAL VARIABLES OF MOTION*********************/
 
-double w = 4.56;
-double q = 0.5*4.56;
-double u = 1.00*4.56;
-double Fd = 0.0;
+double w = 2*M_PI*2.0;
+double q = 0.00;
+double wd = 2*M_PI*1.0;
+double Fd = 0.00;
 
 /***********************************AUXILIAR ROUTINES**************************/
 
@@ -46,9 +46,9 @@ double f(int comp, double t, double *y){
   if(comp == 0)
     return y[1];
   if(comp == 1)
-    return -w*w*sin(y[0]) - q*y[1] - Fd*sin(y[2]);
+    return -w*w*y[0] /*- q*y[1] + Fd*sin(y[2])*/;
   if(comp == 2)
-    return u;
+    return wd;
   else
     return 0.0;
 }
@@ -90,10 +90,9 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
     update_kvect(n,2,dt,t,y,k1,k2);
     update_kvect(n,3,dt,t,y,k2,k3);
     update_kvect(n,4,dt,t,y,k3,k4);
-    for(int jj = 0; jj<n; jj++){
+    for(int jj = 0; jj<n; jj++)
       y[jj] += (1.0/6.0)*dt*(k1[jj] + k4[jj] + 2.0*(k2[jj] + k3[jj]));
-      printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,fmod(y[0],2*M_PI),y[1]);
-    }
+    //printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,y[0],y[1]);
     x[ii] = y[0];
   }
 
@@ -112,7 +111,19 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
  void FFTW_Analize(int n, double *x, double *p){
    fftw_complex *in, *out;
    fftw_plan plan;
+   /*
+   int ssize = 0; int tag = 0;
+   for(int ii = 0; ii<n; ii++){
+     if(x[ii] != 0){
+      tag = ii;
+      break;
+    }
+    else
+      tag = 0;
+   }
 
+   ssize = n - tag;
+   */
    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex)*n);
    out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex)*n);
    plan = fftw_plan_dft_1d(n,in,out,FFTW_FORWARD,FFTW_ESTIMATE);
@@ -125,7 +136,7 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
    fftw_execute(plan);
 
    for(int ii = 0; ii<n; ii++)
-     p[ii] = (out[ii][0]*out[ii][0]) + (in[ii][0]*in[ii][0]);
+     p[ii] = (out[ii][0]*out[ii][0]) + (out[ii][1]*out[ii][1]);
 
    fftw_destroy_plan(plan);
    fftw_free(in);
