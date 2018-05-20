@@ -70,7 +70,7 @@ TAREAS PRINCIAPALES:
 	      	y obtener las graficas en el mismo. Estudiar el fenomeno de mez-
 		cla descrito en la discusion del problema.
 
-		FECHA INICIO:
+		FECHA INICIO: 20 de Mayo 2018.
 		FECHA FIN:
 
 	      4 Estudiar el minimo de "doblamiento" de periodo con detalle (ver
@@ -531,4 +531,57 @@ En el rando de 2.0 < Fd < 10.0, se observan tres comopnentes principales:
 El espectro de frecuencias se va corriendo hacia el cero para Fd > 10. En gene-
 ral, la componente "inducida" se va corriendo hacia el cero como Fd tiende a 10.
 
+FEHCA ENTRADA: 18 Mayo 2018.
+
+Se consulto el libro Chaotic Dynamics, y fue imposible reproducir las graficas
+con los datos utilizados en la figura 15 del capitulo 2. Es necesario revisar el
+algoritmo de integracion, pues puede presentar un error serio al resolver el
+sistema con friccion y forzamiento.
+
+Se modifico el codigo para hacerlo mas claro y versatil. En primer lugar, se mo-
+difico la funcion que computava los vectores ki para hacerla mas eficiente en
+terminos de memoria. Ademas, se programo para seleccionar los datos correspon-
+dientes al estado estacionario del sistema. Es ahi donde se observa mejor el
+comportamiento caotico.
+
+FECHA ENTRADA: 20 Mayo 2018.
+
+Se arreglaron cuestiones relativas a la conservacion de la energia en el algo-
+ritmo de integracion implementado. Se agregaron las fuciones de energia y de
+potencia a la descripcion fisica del sistema. Se observo que rk4 no conserva
+la energia del sistema para ciertos valores del paso de timepo. De hecho, se
+observo que para dt > 0.001, la energia del sistema tiende a decrecer en forma
+lineal (aprox.) con el tiempo, para el pendulo sin forzamiento y sin friccion.
+Para dt = 0.001, se obtuvo conservacion de la energia hasta la sexta cifra de-
+cimal.
+
+Por otro lado, en el libro Chaotic Dynamics se encontraron los siguientes para-
+metros para obtener un comportamiento caotico del pendulo:
+
+       	    	    Frec. Natural : 1.0
+		    Frec. Forz. : 2.0/3.0
+		    Fricc. Visc. : 0.5
+		    Forz: (0.5:1.5)
+
+Con estos parametros se pudo reproducir los espacios de estado de la figura 15
+del capitulo 2 del libro. 
+
+Se procede a resolver el primer punto de las tareas en el archivo descriptivo
+del proyecto. Se estudia un caso particular de la mezcla no lineal de señales,
+determinando como depende el tamaño de una componente a 3 veces la frecuencia
+de forzamiento (aprox.) de la frecuencia de forzamiento en el rango de fuer-
+zas Fd (0.95:1.00)
+
+		INTENSIDAD FUERZA	TAMAÑO COMP.
+		    0.95   		 0.4293941
+		    0.955		 0.4408878
+		    0.96		 0.4508229
+		    0.965		 0.4584521
+		    0.97		 0.4619177
+		    0.975		 0.4575716
+		    0.98		 0.4427678
+		    0.985		 0.4219052
+		    0.99		 0.4029373
+		    0.995		 1.1967696
+		    1.00		 1.8775087
 
