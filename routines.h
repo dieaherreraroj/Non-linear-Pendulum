@@ -5,10 +5,13 @@
 
 /*******************************GLOBAL VARIABLES OF MOTION*********************/
 
-double w = 2*M_PI*2.0;
-double q = 0.00;
-double wd = 2*M_PI*1.0;
-double Fd = 0.00;
+// According to Baker and Gollub, a suitable range of parameters to produce a
+// chaotic motion is q = 2.0, w = 2/3 and Fd in [0.5:1.5].
+
+double w = 1.0;
+double q = 0.5;
+double wd = 2.0/3.0;
+double Fd =1.45;
 
 /***********************************AUXILIAR ROUTINES**************************/
 
@@ -18,10 +21,13 @@ double f(int comp, double t, double *y);
 void update_kvect(int n, int tag, double h, double t, double *y, double *ki, double *kf);
 void init_vector(int n, double *y, double x0, double v0);
 
+double e_mec(double x, double v);
+double power_mec(double a, double v);
+
 /***********************************ANALISIS ROUTINES**************************/
 
 void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
-void leap_frog(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
+void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
 void FFTW_Analize(int n, double *x, double *p);
 
 /***********************************IMPLEMENTATIONS****************************/
@@ -46,7 +52,7 @@ double f(int comp, double t, double *y){
   if(comp == 0)
     return y[1];
   if(comp == 1)
-    return -w*w*y[0] /*- q*y[1] + Fd*sin(y[2])*/;
+    return -w*w*sin(y[0]) - q*y[1] + Fd*cos(y[2]);
   if(comp == 2)
     return wd;
   else
@@ -72,6 +78,14 @@ void init_vector(int n, double *y, double x0, double v0){
   y[2] = 0.0;
 }
 
+double e_mec(double x, double v){
+  return 0.5*v*v + w*w*(1.0-cos(x));
+}
+
+double power_mec(double a, double v){
+  return (Fd*sin(a) - q*v)*v;
+}
+
 /*****************************MAIN IMPLEMENTATIONS*****************************/
 
 void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x){
@@ -92,8 +106,19 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
     update_kvect(n,4,dt,t,y,k3,k4);
     for(int jj = 0; jj<n; jj++)
       y[jj] += (1.0/6.0)*dt*(k1[jj] + k4[jj] + 2.0*(k2[jj] + k3[jj]));
-    //printf("%d\t%4.7f\t%4.7f\t%4.7f\n",ii,t,y[0],y[1]);
-    x[ii] = y[0];
+    double theta = atan2(sin(y[0]),cos(y[0]));
+    if(q > 0.0){
+      if(t > 10.0/q){
+        printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+        x[ii] = theta;
+      }
+      else
+        x[ii] = 0.0;
+    }
+    else{
+      printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+      x[ii] = theta;
+    }
   }
 
   free(y);
@@ -101,6 +126,10 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
   free(k2);
   free(k3);
   free(k4);
+}
+
+void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x){
+
 }
 
 // We compute DFT using std library fftw3. Future feature: include mpi options
