@@ -48,8 +48,8 @@ TAREAS PRINCIAPALES:
 	      * BONUS: Si los algoritmos lo permiten, encontrar una paraleliza-
 	      	cion para obtener resultados mas rapido
 
-		FECHA INICIO:
-		FECHA FIN:
+		FECHA INICIO: -------
+		FECHA FIN:    -------
 
 2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
 
@@ -585,3 +585,18 @@ zas Fd (0.95:1.00)
 		    0.995		 1.1967696
 		    1.00		 1.8775087
 
+Se observa tambien una componete importante a 5 veces la frecuencia de forza-
+miento (aprox.). Tmabien una componente importante a aproximadamente la cuarta
+parte de la frecuencia de forzamiento (0.022 Hz aprox.). El tamaño de esta com-
+ponente como funcion del forzamiento se muestrta a continuacion.
+
+FECHA ENTRADA: 21 de Mayo 2018.
+
+El dia de hoy se generaron las primeras animaciones de los movimientos con for-
+zamiento para las amplitudes Fd = 1.07, 1.35, y 1.45. Tambien se actualizo el
+archivo routines.h con una subrutina que genera las animaciones. El programa ha
+funcionado bastante bien desde las ultimas correcciones.
+
+Se añadio una nueva funcionalidad al programa: escribir los datos en ficheros
+desde el codigo. El programa se corrio nuevamente, y se obtuvo resultados bas-
+tante satisfactorios.
