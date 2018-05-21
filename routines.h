@@ -11,7 +11,7 @@
 double w = 1.0;
 double q = 0.5;
 double wd = 2.0/3.0;
-double Fd = 1.07;
+double Fd = 1.45;
 
 /***********************************AUXILIAR ROUTINES**************************/
 
@@ -91,28 +91,31 @@ void init_vector(int n, double *y, double x0, double v0){
 /******************************************************************************/
 
 void gen_animgif(int NSTEP, double t0, double dt, double *x){
+  FILE *fptr;
+  fptr = fopen("anim_gen.gp","w");
   double t;
-  printf("set terminal gif animate delay 2.5\n");
-  printf("set out 'pendula_anim.gif'\n");
-  printf("set xrange [-1.5:1.5]\n");
-  printf("set yrange [-1.5:1.5]\n");
+  fprintf(fptr,"set terminal gif animate delay 2.5\n");
+  fprintf(fptr,"set out 'nlp_Fd_1.45.gif'\n");
+  fprintf(fptr,"set xrange [-1.5:1.5]\n");
+  fprintf(fptr,"set yrange [-1.5:1.5]\n");
   for(int ii = 0; ii<NSTEP; ii+=20){
     t = t0 + ii*dt;
     if(q > 0.0){
       if(t > 10.0/q){
-        printf("plot '-' w l lw 4 lt 4\n");
-        printf("%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
-        printf("%4.7f\t  %4.7f\n",0.0,0.0);
-        printf("e\n");
+        fprintf(fptr,"plot '-' w l lw 4 lt 8\n");
+        fprintf(fptr,"%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
+        fprintf(fptr,"%4.7f\t  %4.7f\n",0.0,0.0);
+        fprintf(fptr,"e\n");
       }
     }
     else{
-      printf("plot '-' w l lw 4 lt 4\n");
-      printf("%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
-      printf("%4.7f\t  %4.7f\n",0.0,0.0);
-      printf("e\n");
+      fprintf(fptr,"plot '-' w l lw 4 lt 4\n");
+      fprintf(fptr,"%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
+      fprintf(fptr,"%4.7f\t  %4.7f\n",0.0,0.0);
+      fprintf(fptr,"e\n");
     }
   }
+  fclose(fptr);
 }
 
 /******************************************************************************/
@@ -137,7 +140,8 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
   double *k2 = (double*) calloc(n,sizeof(double));
   double *k3 = (double*) calloc(n,sizeof(double));
   double *k4 = (double*) calloc(n,sizeof(double));
-
+  FILE *fptr;
+  fptr = fopen("ps_Fd_1.45.txt","w");
   double t = t0;
   init_vector(n,y,x0,v0);
   x[0] = x0;
@@ -152,18 +156,18 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
     double theta = atan2(sin(y[0]),cos(y[0]));
     if(q > 0.0){
       if(t > 10.0/q){
-        //printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+        fprintf(fptr,"%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
         x[ii] = theta;
       }
       else
         x[ii] = 0.0;
     }
     else{
-      //printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+      fprintf(fptr,"%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
       x[ii] = theta;
     }
   }
-
+  fclose(fptr);
   free(y);
   free(k1);
   free(k2);
