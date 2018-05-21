@@ -1,4 +1,4 @@
-set terminal gif animate delay 5
+set terminal gif animate delay 2.5
 set out 'pendula_anim.gif'
 set xrange [-1.5:1.5]
 set yrange [-1.5:1.5]
