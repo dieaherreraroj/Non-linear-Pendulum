@@ -11,7 +11,7 @@
 double w = 1.0;
 double q = 0.5;
 double wd = 2.0/3.0;
-double Fd =1.45;
+double Fd = 1.07;
 
 /***********************************AUXILIAR ROUTINES**************************/
 
@@ -20,6 +20,7 @@ void aux_interm(int n, int tag, double h, double *x, double *y, double *z);
 double f(int comp, double t, double *y);
 void update_kvect(int n, int tag, double h, double t, double *y, double *ki, double *kf);
 void init_vector(int n, double *y, double x0, double v0);
+void gen_animgif(int NSTEP, double t0, double dx, double *x);
 
 double e_mec(double x, double v);
 double power_mec(double a, double v);
@@ -27,8 +28,9 @@ double power_mec(double a, double v);
 /***********************************ANALISIS ROUTINES**************************/
 
 void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
-void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x);
 void FFTW_Analize(int n, double *x, double *p);
+
+/******************************************************************************/
 
 /***********************************IMPLEMENTATIONS****************************/
 
@@ -36,6 +38,8 @@ void copy_vect(int n, double *y, double *x){
   for(int ii = 0; ii<n; ii++)
     x[ii] = y[ii];
 }
+
+/******************************************************************************/
 
 void aux_interm(int n, int tag, double h, double *x, double *y, double *z){
   if(tag == 1)
@@ -48,6 +52,8 @@ void aux_interm(int n, int tag, double h, double *x, double *y, double *z){
       z[ii] = x[ii] + h*y[ii];
 }
 
+/******************************************************************************/
+
 double f(int comp, double t, double *y){
   if(comp == 0)
     return y[1];
@@ -58,6 +64,8 @@ double f(int comp, double t, double *y){
   else
     return 0.0;
 }
+
+/******************************************************************************/
 
 void update_kvect(int n, int tag, double h, double t, double *y, double *ki, double *kf){
   double *aux = (double*) calloc(n,sizeof(double));
@@ -72,19 +80,54 @@ void update_kvect(int n, int tag, double h, double t, double *y, double *ki, dou
   free(aux);
 }
 
+/******************************************************************************/
+
 void init_vector(int n, double *y, double x0, double v0){
   y[0] = x0;
   y[1] = v0;
   y[2] = 0.0;
 }
 
+/******************************************************************************/
+
+void gen_animgif(int NSTEP, double t0, double dt, double *x){
+  double t;
+  printf("set terminal gif animate delay 2.5\n");
+  printf("set out 'pendula_anim.gif'\n");
+  printf("set xrange [-1.5:1.5]\n");
+  printf("set yrange [-1.5:1.5]\n");
+  for(int ii = 0; ii<NSTEP; ii+=20){
+    t = t0 + ii*dt;
+    if(q > 0.0){
+      if(t > 10.0/q){
+        printf("plot '-' w l lw 4 lt 4\n");
+        printf("%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
+        printf("%4.7f\t  %4.7f\n",0.0,0.0);
+        printf("e\n");
+      }
+    }
+    else{
+      printf("plot '-' w l lw 4 lt 4\n");
+      printf("%4.7f\t  %4.7f\n",sin(x[ii]),-cos(x[ii]));
+      printf("%4.7f\t  %4.7f\n",0.0,0.0);
+      printf("e\n");
+    }
+  }
+}
+
+/******************************************************************************/
+
 double e_mec(double x, double v){
   return 0.5*v*v + w*w*(1.0-cos(x));
 }
 
+/******************************************************************************/
+
 double power_mec(double a, double v){
   return (Fd*sin(a) - q*v)*v;
 }
+
+/******************************************************************************/
 
 /*****************************MAIN IMPLEMENTATIONS*****************************/
 
@@ -97,8 +140,8 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
 
   double t = t0;
   init_vector(n,y,x0,v0);
-
-  for(int ii = 0; ii<NSTEP; ii++){
+  x[0] = x0;
+  for(int ii = 1; ii<NSTEP; ii++){
     t = t0 +ii*dt;
     update_kvect(n,1,dt,t,y,y,k1);
     update_kvect(n,2,dt,t,y,k1,k2);
@@ -109,14 +152,14 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
     double theta = atan2(sin(y[0]),cos(y[0]));
     if(q > 0.0){
       if(t > 10.0/q){
-        printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+        //printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
         x[ii] = theta;
       }
       else
         x[ii] = 0.0;
     }
     else{
-      printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
+      //printf("%4.7f\t %4.7f\t %4.7f\t %4.7f\t %4.7f\n",t,theta,y[1],e_mec(theta,y[1])/(2*w*w),power_mec(y[2],y[1]));
       x[ii] = theta;
     }
   }
@@ -128,9 +171,7 @@ void rk4_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, dou
   free(k4);
 }
 
-void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, double *x){
-
-}
+/******************************************************************************/
 
 // We compute DFT using std library fftw3. Future feature: include mpi options
 // This function is just a basic pilot in order to get started. By now it just
@@ -140,19 +181,7 @@ void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, 
  void FFTW_Analize(int n, double *x, double *p){
    fftw_complex *in, *out;
    fftw_plan plan;
-   /*
-   int ssize = 0; int tag = 0;
-   for(int ii = 0; ii<n; ii++){
-     if(x[ii] != 0){
-      tag = ii;
-      break;
-    }
-    else
-      tag = 0;
-   }
 
-   ssize = n - tag;
-   */
    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex)*n);
    out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex)*n);
    plan = fftw_plan_dft_1d(n,in,out,FFTW_FORWARD,FFTW_ESTIMATE);
@@ -171,3 +200,5 @@ void verlet_integ(int n, int NSTEP, double dt, double t0, double x0, double v0, 
    fftw_free(in);
    fftw_free(out);
  }
+
+ /******************************************************************************/

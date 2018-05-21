@@ -6,14 +6,14 @@ int main(int argc, char **argv){
   int NSTEP = 0.0;
 
   if (q > 0.00) {
-    NSTEP = 1000*((int) 30.0/q + 5*((int) (2*M_PI)/w));
+    NSTEP = 1000*((int) 10.0/q + 3*((int) (2*M_PI)/w));
   } else {
-    NSTEP = 1000*5*((int) (2*M_PI)/w);
+    NSTEP = 1000*3*((int) (2*M_PI)/w);
   }
 
   double dt = 0.001;
   double t0 = 0.0;
-  double x0 = M_PI*0.50;
+  double x0 = M_PI*0.80;
   double v_crit = 2.0*w*cos(x0/2.0);
   double v0 = 0.0*v_crit;
   double f_samp = 1.0/dt;
@@ -22,6 +22,7 @@ int main(int argc, char **argv){
   double *p = (double*) calloc(NSTEP,sizeof(double));
 
   rk4_integ(n,NSTEP,dt,t0,x0,v0,x);
+  gen_animgif(NSTEP,t0,dt,x);
   /*
   FFTW_Analize(NSTEP,x,p);
 
