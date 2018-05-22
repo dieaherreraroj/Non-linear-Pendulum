@@ -51,7 +51,7 @@ TAREAS PRINCIAPALES:
 		FECHA INICIO: -------
 		FECHA FIN:    -------
 
-2) REALIZAR EL MUESTRO DE LAS SEÑALES PARA ANALISIS DEL RUIDO:
+2) REALIZAR EL MUESTRO DE LAS SENALES PARA ANALISIS DEL RUIDO:
 
    SUBTAREAS: 1 Documentarse sobre la libreria FFTW e implementar una subrutina
    	      	que calcule la DFT de un conjunto de datos, y la potencia.
@@ -59,12 +59,12 @@ TAREAS PRINCIAPALES:
 		FECHA INICIO: 14 de Mayo 2018.
 		FECHA FIN: 14 de Mayo 2018.
 
-	      2 Generar las señales utilizando la rutina de solucion de la EDM,
+	      2 Generar las senales utilizando la rutina de solucion de la EDM,
 	      	y realizar analisis de Fourier con la rutina de la subtarea an-
 		terior. Obtener graficas de potencia en el espectro frecuencias.
 
 		FECHA INICIO: 14 de Mayo 2018.
-		FECHA FIN:
+		FECHA FIN: 22 de Mayo 2018.
 
 	      3 Resolver los puntos 1 y 2 en el archivo 06-espectroOscFFT.pdf
 	      	y obtener las graficas en el mismo. Estudiar el fenomeno de mez-
@@ -388,7 +388,7 @@ cuencias. i.e.
 	  ponerse en señales sinusoidales simples con frecuencias
 	  distribuidas de forma continua (en general).
 
-Este resultado se denomina teorema de Fourier. La distribucion de la señal en el
+Este resultado se denomina teorema de Fourier. La distribucion de la senal en el
 dominio del tiempo y de la frecuencia se relacionan por medio de la Transformada
 de Fourier y su Transformada inversa.
 
@@ -572,7 +572,7 @@ determinando como depende el tamaño de una componente a 3 veces la frecuencia
 de forzamiento (aprox.) de la frecuencia de forzamiento en el rango de fuer-
 zas Fd (0.95:1.00)
 
-		INTENSIDAD FUERZA	TAMAÑO COMP.
+		INTENSIDAD FUERZA	TAMANIO COMP.
 		    0.95   		 0.4293941
 		    0.955		 0.4408878
 		    0.96		 0.4508229
@@ -597,6 +597,15 @@ zamiento para las amplitudes Fd = 1.07, 1.35, y 1.45. Tambien se actualizo el
 archivo routines.h con una subrutina que genera las animaciones. El programa ha
 funcionado bastante bien desde las ultimas correcciones.
 
-Se añadio una nueva funcionalidad al programa: escribir los datos en ficheros
+Se anadio una nueva funcionalidad al programa: escribir los datos en ficheros
 desde el codigo. El programa se corrio nuevamente, y se obtuvo resultados bas-
 tante satisfactorios.
+
+FECHA ENTRADA: 22 de Mayo 2018.
+
+Se reprodujeron exitosamente las graficas de distribucion de potencias para los
+parametros utilizados en el archivo 06-espectroOscFFT.pdf. Tambien se generaron
+animaciones para cada uno de los movimientos considerados. Todas se encuentran
+en el repositorio del proyecto.
+
+
